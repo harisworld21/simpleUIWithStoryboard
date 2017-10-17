@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FFA7BF1F964B3400597789 /* FLowerViewController.swift */; };
 		984C262B1F7F7FC600BA16DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C262A1F7F7FC600BA16DD /* AppDelegate.swift */; };
 		984C262D1F7F7FC600BA16DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C262C1F7F7FC600BA16DD /* ViewController.swift */; };
 		984C26301F7F7FC600BA16DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984C262E1F7F7FC600BA16DD /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47FFA7BF1F964B3400597789 /* FLowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLowerViewController.swift; sourceTree = "<group>"; };
 		984C26271F7F7FC600BA16DD /* simpleUIWithStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleUIWithStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984C262A1F7F7FC600BA16DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		984C262C1F7F7FC600BA16DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				984C262A1F7F7FC600BA16DD /* AppDelegate.swift */,
 				984C262C1F7F7FC600BA16DD /* ViewController.swift */,
+				47FFA7BF1F964B3400597789 /* FLowerViewController.swift */,
 				984C262E1F7F7FC600BA16DD /* Main.storyboard */,
 				984C26311F7F7FC700BA16DD /* Assets.xcassets */,
 				984C26331F7F7FC700BA16DD /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				984C262D1F7F7FC600BA16DD /* ViewController.swift in Sources */,
 				984C262B1F7F7FC600BA16DD /* AppDelegate.swift in Sources */,
+				47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
