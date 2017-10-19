@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471274B31F98F7F400558526 /* fruits.json in Resources */ = {isa = PBXBuildFile; fileRef = 471274B21F98F7F400558526 /* fruits.json */; };
+		47FF01D61F98809E00B92591 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */; };
 		47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FFA7BF1F964B3400597789 /* FLowerViewController.swift */; };
 		984C262B1F7F7FC600BA16DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C262A1F7F7FC600BA16DD /* AppDelegate.swift */; };
 		984C262D1F7F7FC600BA16DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C262C1F7F7FC600BA16DD /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		471274B21F98F7F400558526 /* fruits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fruits.json; sourceTree = "<group>"; };
+		47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		47FFA7BF1F964B3400597789 /* FLowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLowerViewController.swift; sourceTree = "<group>"; };
 		984C26271F7F7FC600BA16DD /* simpleUIWithStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleUIWithStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984C262A1F7F7FC600BA16DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,11 +105,13 @@
 			children = (
 				984C262A1F7F7FC600BA16DD /* AppDelegate.swift */,
 				984C262C1F7F7FC600BA16DD /* ViewController.swift */,
+				47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */,
 				47FFA7BF1F964B3400597789 /* FLowerViewController.swift */,
 				984C262E1F7F7FC600BA16DD /* Main.storyboard */,
 				984C26311F7F7FC700BA16DD /* Assets.xcassets */,
 				984C26331F7F7FC700BA16DD /* LaunchScreen.storyboard */,
 				984C26361F7F7FC700BA16DD /* Info.plist */,
+				471274B21F98F7F400558526 /* fruits.json */,
 			);
 			path = simpleUIWithStoryboard;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				471274B31F98F7F400558526 /* fruits.json in Resources */,
 				984C26351F7F7FC700BA16DD /* LaunchScreen.storyboard in Resources */,
 				984C26321F7F7FC700BA16DD /* Assets.xcassets in Resources */,
 				984C26301F7F7FC600BA16DD /* Main.storyboard in Resources */,
@@ -264,6 +271,7 @@
 			files = (
 				984C262D1F7F7FC600BA16DD /* ViewController.swift in Sources */,
 				984C262B1F7F7FC600BA16DD /* AppDelegate.swift in Sources */,
+				47FF01D61F98809E00B92591 /* CustomImageFlowLayout.swift in Sources */,
 				47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,11 +439,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GZ22B48MK;
+				DEVELOPMENT_TEAM = LWQS96PGKL;
 				INFOPLIST_FILE = simpleUIWithStoryboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shakunsun.simpleUIWithStoryboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dish.simpleUIWithStoryboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,11 +455,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GZ22B48MK;
+				DEVELOPMENT_TEAM = LWQS96PGKL;
 				INFOPLIST_FILE = simpleUIWithStoryboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = shakunsun.simpleUIWithStoryboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dish.simpleUIWithStoryboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

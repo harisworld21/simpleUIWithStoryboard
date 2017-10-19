@@ -40,6 +40,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginToCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKW-rM-Qoi"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGL-LQ-FVf">
                                         <rect key="frame" x="123.5" y="30" width="52" height="21"/>
@@ -83,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="137.59999999999999" y="133.13343328335833"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Flower View Controller-->
         <scene sceneID="vrz-Hg-eA5">
             <objects>
-                <collectionViewController id="ngi-3G-ZEx" sceneMemberID="viewController">
+                <collectionViewController id="ngi-3G-ZEx" customClass="FlowerViewController" customModule="simpleUIWithStoryboard" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZTU-GI-lOY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,13 +101,25 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="64J-Ye-2hu">
-                                <rect key="frame" x="0.0" y="0.0" width="87" height="94"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="center" reuseIdentifier="Cell" id="64J-Ye-2hu" customClass="flowerCell" customModule="simpleUIWithStoryboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="87" height="94"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQ1-ce-1x1">
+                                            <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="94" height="94"/>
+                                <connections>
+                                    <outlet property="img" destination="kQ1-ce-1x1" id="VM3-rz-ybZ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -112,10 +127,43 @@
                             <outlet property="delegate" destination="ngi-3G-ZEx" id="AgK-r8-qFZ"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="collectionView" destination="ZTU-GI-lOY" id="EGG-q5-6Ee"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DF-7z-gXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="132.68365817091455"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Ah-kk-T9H">
+            <objects>
+                <viewController id="rHc-yB-Rxo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yd4-Hr-Uh2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlQ-Dn-Tr0">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="600" id="4EM-6R-hiB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="PHn-WM-YUU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="pcd-w0-b1f"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="250" constant="600" id="yhl-VI-sSJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OlQ-Dn-Tr0" firstAttribute="centerY" secondItem="Yd4-Hr-Uh2" secondAttribute="centerY" id="Rvc-Rl-u8G"/>
+                            <constraint firstItem="OlQ-Dn-Tr0" firstAttribute="centerX" secondItem="Yd4-Hr-Uh2" secondAttribute="centerX" id="kck-0n-w91"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lUv-QE-nIJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RhD-77-WLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1860" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
