@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470A11FA1F9A4B0C00DE6AC6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */; };
 		471274B31F98F7F400558526 /* fruits.json in Resources */ = {isa = PBXBuildFile; fileRef = 471274B21F98F7F400558526 /* fruits.json */; };
 		47FF01D61F98809E00B92591 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */; };
 		47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FFA7BF1F964B3400597789 /* FLowerViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		471274B21F98F7F400558526 /* fruits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fruits.json; sourceTree = "<group>"; };
 		47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		47FFA7BF1F964B3400597789 /* FLowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLowerViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				984C262C1F7F7FC600BA16DD /* ViewController.swift */,
 				47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */,
 				47FFA7BF1F964B3400597789 /* FLowerViewController.swift */,
+				470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */,
 				984C262E1F7F7FC600BA16DD /* Main.storyboard */,
 				984C26311F7F7FC700BA16DD /* Assets.xcassets */,
 				984C26331F7F7FC700BA16DD /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				984C262D1F7F7FC600BA16DD /* ViewController.swift in Sources */,
+				470A11FA1F9A4B0C00DE6AC6 /* MenuViewController.swift in Sources */,
 				984C262B1F7F7FC600BA16DD /* AppDelegate.swift in Sources */,
 				47FF01D61F98809E00B92591 /* CustomImageFlowLayout.swift in Sources */,
 				47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */,

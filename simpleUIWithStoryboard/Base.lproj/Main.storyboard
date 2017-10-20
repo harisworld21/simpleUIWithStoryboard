@@ -6,10 +6,56 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="K8X-GF-Brd">
+            <objects>
+                <viewController id="imF-Cj-aef" customClass="MenuViewController" customModule="simpleUIWithStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7mf-n7-jrd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-XR-aJJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="ngi-3G-ZEx" kind="embed" id="gn4-eP-qCz"/>
+                                </connections>
+                            </containerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-b6-C5R">
+                                <rect key="frame" x="37" y="183" width="301" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="500" id="9gK-0z-Uu9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="S0H-HQ-PIv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dPg-3U-0C3"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="500" id="foj-NE-H4G"/>
+                                    <constraint firstAttribute="width" secondItem="xbI-b6-C5R" secondAttribute="height" multiplier="1:1" id="g3I-M1-Q0e"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vek-xT-B6r" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xbI-b6-C5R" secondAttribute="bottom" id="1Fy-np-RvI"/>
+                            <constraint firstItem="xbI-b6-C5R" firstAttribute="leading" secondItem="7mf-n7-jrd" secondAttribute="leading" constant="37" id="23y-75-xJh"/>
+                            <constraint firstItem="8Vj-XR-aJJ" firstAttribute="leading" secondItem="vek-xT-B6r" secondAttribute="leading" id="CjQ-i3-vvH"/>
+                            <constraint firstItem="xbI-b6-C5R" firstAttribute="centerX" secondItem="7mf-n7-jrd" secondAttribute="centerX" id="FXh-QI-Lw5"/>
+                            <constraint firstItem="8Vj-XR-aJJ" firstAttribute="trailing" secondItem="vek-xT-B6r" secondAttribute="trailing" id="G8X-k0-OxC"/>
+                            <constraint firstItem="8Vj-XR-aJJ" firstAttribute="bottom" secondItem="vek-xT-B6r" secondAttribute="bottom" id="Tha-6X-IdO"/>
+                            <constraint firstItem="8Vj-XR-aJJ" firstAttribute="top" secondItem="7mf-n7-jrd" secondAttribute="top" id="WT7-Sg-Pqh"/>
+                            <constraint firstItem="xbI-b6-C5R" firstAttribute="centerY" secondItem="7mf-n7-jrd" secondAttribute="centerY" id="c6b-hW-nTD"/>
+                            <constraint firstItem="xbI-b6-C5R" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vek-xT-B6r" secondAttribute="top" id="fyJ-Y3-wVf"/>
+                            <constraint firstAttribute="trailing" secondItem="xbI-b6-C5R" secondAttribute="trailing" constant="37" id="on7-hb-mSt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vek-xT-B6r"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lj4-qH-E5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="357.60000000000002" y="-763.26836581709154"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -79,7 +125,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="ngi-3G-ZEx" kind="showDetail" identifier="collectionView" id="6YK-CZ-Nds"/>
+                        <segue destination="imF-Cj-aef" kind="show" identifier="collectionView" id="01M-zj-QJ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,7 +147,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.40000000000000002" contentMode="center" reuseIdentifier="Cell" id="64J-Ye-2hu" customClass="flowerCell" customModule="simpleUIWithStoryboard" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.14999999999999999" contentMode="center" reuseIdentifier="Cell" id="64J-Ye-2hu" customClass="flowerCell" customModule="simpleUIWithStoryboard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="94" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -114,7 +160,7 @@
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="customSize" width="94" height="94"/>
                                 <connections>
@@ -133,37 +179,10 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DF-7z-gXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.79999999999995" y="132.68365817091455"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1Ah-kk-T9H">
-            <objects>
-                <viewController id="rHc-yB-Rxo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Yd4-Hr-Uh2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlQ-Dn-Tr0">
-                                <rect key="frame" x="37" y="183" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="600" id="4EM-6R-hiB"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="PHn-WM-YUU"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="pcd-w0-b1f"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="250" constant="600" id="yhl-VI-sSJ"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="OlQ-Dn-Tr0" firstAttribute="centerY" secondItem="Yd4-Hr-Uh2" secondAttribute="centerY" id="Rvc-Rl-u8G"/>
-                            <constraint firstItem="OlQ-Dn-Tr0" firstAttribute="centerX" secondItem="Yd4-Hr-Uh2" secondAttribute="centerX" id="kck-0n-w91"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lUv-QE-nIJ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RhD-77-WLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1860" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1289" y="-794"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="banana" width="1200" height="974"/>
+    </resources>
 </document>
