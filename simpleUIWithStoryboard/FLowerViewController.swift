@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import AVFoundation
+
 
 class FlowerViewController : UICollectionViewController
 {
+    weak var masterView : MenuViewController!
     let collectionLayout = CustomImageFlowLayout()
     var object = [objects]()
     override func viewDidLoad() {
@@ -44,6 +45,7 @@ class FlowerViewController : UICollectionViewController
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! flowerCell
+        masterView.selectedSegue(obj: object[indexPath.row])
         cell.img.image = object[indexPath.row].img
     }
     
@@ -61,21 +63,6 @@ class FlowerViewController : UICollectionViewController
         cell.img.image = object[indexPath.row].img
         return cell
     }
-    
-    func playSound(fileName: String) {
-        let url = Bundle.main.url(forResource: fileName, withExtension: "mp3")!
-        
-        do {
-            let player = try AVAudioPlayer(contentsOf: url)
-            player.prepareToPlay()
-            player.play()
-        } catch let error as NSError {
-            print(error.description)
-        }
-    }
-    
-   
-    
 }
 
 class flowerCell: UICollectionViewCell
