@@ -40,11 +40,26 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func userTappedImage(_ sender: Any) {
-        if !imageView.isHidden
-        {
+//        if !imageView.isHidden
+//        {
+            let newCenter = CGPoint(x: 0, y: 0)
+            let newSize = CGSize(width:0, height:0)
+            UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
+                self.imageView.center = newCenter
+                self.imageView.frame.size = newSize
+            }) { (success: Bool) in
+                print("Done moving image")
+            }
+            
+            UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
+                self.imageView.alpha = 1.0
+            }, completion: {_ in
+                
+            })
             container.alpha = 1
             imageView.isHidden = true
-        }
+//    }
+        
     }
     
     func selectedSegue(obj: objects)

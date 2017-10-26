@@ -32,8 +32,8 @@ class CustomImageFlowLayout: UICollectionViewFlowLayout {
     }
 
     func setupLayout() {
-        minimumInteritemSpacing = 1
-        minimumLineSpacing = 1
+        minimumInteritemSpacing = 0
+        minimumLineSpacing = 0
         scrollDirection = .vertical
     }
 
