@@ -31,6 +31,18 @@ class simpleUIWithStoryboardUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        let usernameTextField = app.textFields["UserName"]
+        usernameTextField.tap()
+        usernameTextField.typeText("hari")
+        
+        let passwordTextField = app.textFields["Password"]
+        passwordTextField.tap()
+        passwordTextField.typeText("hari")
+        app.buttons["Login"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element.tap()
+        
     }
     
 }

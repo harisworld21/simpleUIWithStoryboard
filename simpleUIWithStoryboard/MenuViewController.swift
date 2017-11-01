@@ -13,10 +13,11 @@ class MenuViewController: UIViewController {
     
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var displayView: UIView!
     
     override func viewDidLoad() {
         container.alpha = 1
-        imageView.isHidden = true
+        displayView.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -40,33 +41,31 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func userTappedImage(_ sender: Any) {
-//        if !imageView.isHidden
-//        {
-            let newCenter = CGPoint(x: 0, y: 0)
-            let newSize = CGSize(width:0, height:0)
-            UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
-                self.imageView.center = newCenter
-                self.imageView.frame.size = newSize
-            }) { (success: Bool) in
-                print("Done moving image")
-            }
-            
-            UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-                self.imageView.alpha = 1.0
-            }, completion: {_ in
-                
-            })
+        if !displayView.isHidden
+        {
+            displayView.isHidden = true
             container.alpha = 1
-            imageView.isHidden = true
-//    }
-        
+        }
     }
     
-    func selectedSegue(obj: objects)
+    @IBAction func closeClicked(_ sender: Any) {
+        userTappedImage(sender)
+    }
+    
+    func selectedSegue(obj: objects, frame:CGRect)
     {
-        imageView.isHidden = false
+        displayView.isHidden = false
         container.alpha = 0.4
         imageView.image = obj.img
+        let oldCenter = imageView.frame
+        imageView.frame = frame
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+            self.imageView.frame = oldCenter
+            
+        }) { (success: Bool) in
+            print("Done moving image")
+        }
     }
     
 }
