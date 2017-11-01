@@ -9,14 +9,14 @@
   "sound": "orange"
   },
   {
-  "name": "pineapple",
-  "image": "pineapple",
-  "sound": "pineapple"
+  "name": "peach",
+  "image": "peach",
+  "sound": "peach"
   },
   {
-  "name": "pomegranate",
-  "image": "pomegranate",
-  "sound": "pomegranate"
+  "name": "grapes",
+  "image": "grapes",
+  "sound": "grapes"
   },
   {
   "name": "watermelon",
@@ -42,5 +42,10 @@
   "name": "kiwi",
   "image": "kiwi",
   "sound": "kiwi"
+  },
+  {
+  "name": "coconut",
+  "image": "coconut",
+  "sound": "coconut"
   }
   ]
