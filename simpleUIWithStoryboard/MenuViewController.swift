@@ -13,10 +13,12 @@ class MenuViewController: UIViewController {
     
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var displayView: UIView!
+    var childView : FlowerViewController!
     
     override func viewDidLoad() {
         container.alpha = 1
-        imageView.isHidden = true
+        displayView.isHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -24,6 +26,7 @@ class MenuViewController: UIViewController {
         {
            let viewC = segue.destination as! FlowerViewController
            viewC.masterView = self
+            childView = viewC
         }
     }
     
@@ -40,33 +43,99 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func userTappedImage(_ sender: Any) {
-//        if !imageView.isHidden
-//        {
-            let newCenter = CGPoint(x: 0, y: 0)
-            let newSize = CGSize(width:0, height:0)
-            UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
-                self.imageView.center = newCenter
-                self.imageView.frame.size = newSize
-            }) { (success: Bool) in
-                print("Done moving image")
-            }
-            
-            UIView.animate(withDuration: 2.0, delay: 2.0, options: .curveEaseOut, animations: {
-                self.imageView.alpha = 1.0
-            }, completion: {_ in
-                
-            })
+        if !displayView.isHidden
+        {
+            displayView.isHidden = true
             container.alpha = 1
-            imageView.isHidden = true
-//    }
-        
+        }
     }
     
-    func selectedSegue(obj: objects)
+    @IBAction func closeClicked(_ sender: Any) {
+        userTappedImage(sender)
+    }
+    
+    @IBAction func pageSwiped(_ sender: Any) {
+        if displayView.isHidden
+        {
+            return
+        }
+        if let swipe = sender as? UISwipeGestureRecognizer
+        {
+            switch swipe.direction
+            {
+            case UISwipeGestureRecognizerDirection.left:
+            findPrevious();
+            case UISwipeGestureRecognizerDirection.right:
+            findNext();
+            default:
+                break
+            }
+        }
+    }
+    
+    @IBAction func findPrevious()
     {
-        imageView.isHidden = false
+        if let obj = childView.object as? [objects]
+        {
+            let curIndex = childView.currentIndex
+            if curIndex - 1 > 0
+            {
+                if let prev = obj[curIndex-1] as? objects
+                {
+                    childView.currentIndex -= 1
+                    selectedSegue(obj: prev, frame: CGRect.zero)
+                }
+            }
+            else
+            {
+                if let prev = obj.last as? objects
+                {
+                    childView.currentIndex = obj.count - 1
+                    selectedSegue(obj: prev, frame: CGRect.zero)
+                }
+            }
+        }
+    }
+    
+    @IBAction func findNext()
+    {
+        if let obj = childView.object as? [objects]
+        {
+            var curIndex = childView.currentIndex
+            curIndex += 1
+            if curIndex < obj.count-1
+            {
+                if let prev = obj[curIndex+1] as? objects
+                {
+                childView.currentIndex += 1
+                selectedSegue(obj: prev, frame: CGRect.zero)
+                }
+            }
+            else
+            {
+                if let prev = obj[0] as? objects
+                {
+                    childView.currentIndex = 0
+                    selectedSegue(obj: prev, frame: CGRect.zero)
+                }
+            }
+        }
+    }
+    
+    func selectedSegue(obj: objects, frame:CGRect)
+    {
+        displayView.isHidden = false
         container.alpha = 0.4
         imageView.image = obj.img
+        let oldCenter = imageView.frame
+        imageView.frame = frame
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+            self.imageView.frame = oldCenter
+            
+        }) { (success: Bool) in
+            print("Done moving image")
+        }
     }
     
 }

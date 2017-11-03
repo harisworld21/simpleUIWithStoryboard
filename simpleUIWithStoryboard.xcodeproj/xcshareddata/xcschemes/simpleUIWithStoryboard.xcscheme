@@ -20,6 +20,20 @@
                ReferencedContainer = "container:simpleUIWithStoryboard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "984C26451F7F7FC700BA16DD"
+               BuildableName = "simpleUIWithStoryboardUITests.xctest"
+               BlueprintName = "simpleUIWithStoryboardUITests"
+               ReferencedContainer = "container:simpleUIWithStoryboard.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
