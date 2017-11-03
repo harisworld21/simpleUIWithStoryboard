@@ -14,6 +14,7 @@ class FlowerViewController : UICollectionViewController
     weak var masterView : MenuViewController!
     let collectionLayout = CustomImageFlowLayout()
     var object = [objects]()
+    var currentIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.collectionViewLayout = collectionLayout
@@ -46,7 +47,7 @@ class FlowerViewController : UICollectionViewController
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! flowerCell
         masterView.selectedSegue(obj: object[indexPath.row],frame:cell.frame)
-
+        currentIndex = indexPath.row
         cell.img.image = object[indexPath.row].img
     }
     

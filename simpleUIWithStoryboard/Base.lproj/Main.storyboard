@@ -50,21 +50,47 @@
                                             <action selector="closeClicked:" destination="imF-Cj-aef" eventType="touchUpInside" id="gAD-KX-HSh"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-59-vXY">
+                                        <rect key="frame" x="307" y="621" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="sfl-59-vXY" secondAttribute="height" multiplier="2:1" id="Tb3-pD-RDR"/>
+                                        </constraints>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="findNext" destination="imF-Cj-aef" eventType="touchUpInside" id="9DP-sw-dIs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33h-g5-VHb">
+                                        <rect key="frame" x="10" y="621" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="33h-g5-VHb" secondAttribute="height" multiplier="2:1" id="hDA-cW-WkO"/>
+                                        </constraints>
+                                        <state key="normal" title="Previous"/>
+                                        <connections>
+                                            <action selector="findPrevious" destination="imF-Cj-aef" eventType="touchUpInside" id="l9X-gb-MGF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" id="3Ri-kr-F2b"/>
+                                    <constraint firstAttribute="bottom" secondItem="sfl-59-vXY" secondAttribute="bottom" constant="16" id="EMk-65-bIM"/>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="centerY" secondItem="Gh4-xE-XRu" secondAttribute="centerY" id="EZN-oL-hV8"/>
                                     <constraint firstAttribute="trailing" secondItem="WYO-5l-pFc" secondAttribute="trailing" constant="14" id="LKE-gy-p3P"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xbI-b6-C5R" secondAttribute="trailing" id="MlI-g6-YfZ"/>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="top" id="Nsd-cB-nZR"/>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="centerX" secondItem="Gh4-xE-XRu" secondAttribute="centerX" id="Q4R-Ud-CrO"/>
+                                    <constraint firstItem="WYO-5l-pFc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="20" symbolic="YES" id="Q5U-5W-kTQ"/>
                                     <constraint firstItem="WYO-5l-pFc" firstAttribute="top" secondItem="Gh4-xE-XRu" secondAttribute="top" constant="28" id="Rq4-Nm-0hA"/>
+                                    <constraint firstAttribute="bottom" secondItem="33h-g5-VHb" secondAttribute="bottom" constant="16" id="dKY-kv-GDO"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xbI-b6-C5R" secondAttribute="bottom" id="iIs-ga-cW3"/>
+                                    <constraint firstItem="33h-g5-VHb" firstAttribute="leading" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="10" id="kb7-mo-Drq"/>
+                                    <constraint firstAttribute="trailing" secondItem="sfl-59-vXY" secondAttribute="trailing" constant="8" id="uit-zM-KAc"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Tym-8o-ZPc" appends="YES" id="cBI-fi-3bv"/>
+                                    <outletCollection property="gestureRecognizers" destination="BrB-5W-hWt" appends="YES" id="2ra-4b-hbL"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -94,6 +120,11 @@
                         <action selector="userTappedImage:" destination="imF-Cj-aef" id="pl9-Sa-tCa"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="BrB-5W-hWt">
+                    <connections>
+                        <action selector="pageSwiped:" destination="imF-Cj-aef" id="ndz-Zc-R4y"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="357.60000000000002" y="-763.26836581709154"/>
         </scene>
