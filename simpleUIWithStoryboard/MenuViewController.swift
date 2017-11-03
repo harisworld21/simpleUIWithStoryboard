@@ -78,12 +78,15 @@ class MenuViewController: UIViewController {
         if let obj = childView.object as? [objects]
         {
             let curIndex = childView.currentIndex
+            let imgFrame = imageView.frame
+            let frame = CGRect(x:imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
+            
             if curIndex - 1 > 0
             {
                 if let prev = obj[curIndex-1] as? objects
                 {
                     childView.currentIndex -= 1
-                    selectedSegue(obj: prev, frame: CGRect.zero)
+                    selectedSegue(obj: prev, frame: frame)
                 }
             }
             else
@@ -91,7 +94,7 @@ class MenuViewController: UIViewController {
                 if let prev = obj.last as? objects
                 {
                     childView.currentIndex = obj.count - 1
-                    selectedSegue(obj: prev, frame: CGRect.zero)
+                    selectedSegue(obj: prev, frame: frame)
                 }
             }
         }
@@ -103,12 +106,15 @@ class MenuViewController: UIViewController {
         {
             var curIndex = childView.currentIndex
             curIndex += 1
+            let imgFrame = imageView.frame
+            let frame = CGRect(x:-imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
+
             if curIndex < obj.count-1
             {
                 if let prev = obj[curIndex+1] as? objects
                 {
                 childView.currentIndex += 1
-                selectedSegue(obj: prev, frame: CGRect.zero)
+                selectedSegue(obj: prev, frame: frame)
                 }
             }
             else
@@ -116,7 +122,7 @@ class MenuViewController: UIViewController {
                 if let prev = obj[0] as? objects
                 {
                     childView.currentIndex = 0
-                    selectedSegue(obj: prev, frame: CGRect.zero)
+                    selectedSegue(obj: prev, frame: frame)
                 }
             }
         }
