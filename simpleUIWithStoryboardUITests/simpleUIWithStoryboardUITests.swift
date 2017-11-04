@@ -42,6 +42,23 @@ class simpleUIWithStoryboardUITests: XCTestCase {
         passwordTextField.typeText("hari")
         app.buttons["Login"].tap()
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .collectionView).element.tap()
+
+        
+        let nextButton = app.buttons["Next"]
+        nextButton.tap()
+        nextButton.tap()
+        nextButton.tap()
+        nextButton.tap()
+        nextButton.tap()
+        nextButton.tap()
+        
+        let prevButton = app.buttons["Previous"]
+        prevButton.tap()
+        prevButton.tap()
+        prevButton.tap()
+        prevButton.tap()
+        prevButton.tap()
+                        
         
     }
     
