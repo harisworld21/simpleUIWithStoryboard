@@ -46,7 +46,7 @@ class FlowerViewController : UICollectionViewController
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! flowerCell
-        masterView.selectedSegue(obj: object[indexPath.row],frame:cell.frame)
+        masterView.selectedSegue(obj: object[indexPath.row],imgFrame:cell.frame, oldImgFrame: CGRect.zero)
         currentIndex = indexPath.row
         cell.img.image = object[indexPath.row].img
     }
