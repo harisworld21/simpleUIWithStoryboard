@@ -80,7 +80,8 @@ class MenuViewController: UIViewController {
         {
             let curIndex = childView.currentIndex
             let imgFrame = imageView.frame
-            let frame = CGRect(x:imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
+            let start = UIScreen.main.bounds.width
+            let frame = CGRect(x:start,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
             let oldFrame = CGRect(x:-imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
             tmpImgView.image = imageView.image
             tmpImgView.frame = imageView.frame
@@ -112,8 +113,9 @@ class MenuViewController: UIViewController {
             var curIndex = childView.currentIndex
             curIndex += 1
             let imgFrame = imageView.frame
+            let end = UIScreen.main.bounds.width
             let frame = CGRect(x:-imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
-            let oldFrame = CGRect(x:imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
+            let oldFrame = CGRect(x:end,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
             tmpImgView.image = imageView.image
             tmpImgView.frame = imageView.frame
             view.addSubview(tmpImgView)
@@ -149,6 +151,7 @@ class MenuViewController: UIViewController {
             self.imageView.frame = oldCenter
             self.tmpImgView.frame = oldImgFrame
         }) { (success: Bool) in
+            self.tmpImgView.removeFromSuperview()
             print("Done moving image")
         }
     }
