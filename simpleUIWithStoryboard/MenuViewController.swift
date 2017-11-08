@@ -44,15 +44,16 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func userTappedImage(_ sender: Any) {
+        //closeClicked(sender)
+    }
+    
+    @IBAction func closeClicked(_ sender: Any) {
         if !displayView.isHidden
         {
             displayView.isHidden = true
             container.alpha = 1
         }
-    }
-    
-    @IBAction func closeClicked(_ sender: Any) {
-        userTappedImage(sender)
+        
     }
     
     @IBAction func pageSwiped(_ sender: Any) {
@@ -152,7 +153,6 @@ class MenuViewController: UIViewController {
             self.tmpImgView.frame = oldImgFrame
         }) { (success: Bool) in
             self.tmpImgView.removeFromSuperview()
-            print("Done moving image")
         }
     }
     

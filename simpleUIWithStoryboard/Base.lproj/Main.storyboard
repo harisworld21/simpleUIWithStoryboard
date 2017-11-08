@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-b6-C5R">
-                                        <rect key="frame" x="0.0" y="145.5" width="375" height="375"/>
+                                        <rect key="frame" x="37.5" y="183" width="300" height="300"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="500" id="9gK-0z-Uu9"/>
@@ -45,7 +45,9 @@
                                             <constraint firstAttribute="width" secondItem="WYO-5l-pFc" secondAttribute="height" multiplier="1:1" id="1fd-nv-bt1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                        <state key="normal" title="X"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="closeClicked:" destination="imF-Cj-aef" eventType="touchUpInside" id="gAD-KX-HSh"/>
                                         </connections>
@@ -55,23 +57,29 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sfl-59-vXY" secondAttribute="height" multiplier="2:1" id="Tb3-pD-RDR"/>
                                         </constraints>
-                                        <state key="normal" title="Next"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="findNext" destination="imF-Cj-aef" eventType="touchUpInside" id="9DP-sw-dIs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33h-g5-VHb">
-                                        <rect key="frame" x="10" y="621" width="60" height="30"/>
+                                        <rect key="frame" x="10" y="619" width="64" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="33h-g5-VHb" secondAttribute="height" multiplier="2:1" id="hDA-cW-WkO"/>
                                         </constraints>
-                                        <state key="normal" title="Previous"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Previous">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="findPrevious" destination="imF-Cj-aef" eventType="touchUpInside" id="l9X-gb-MGF"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" id="3Ri-kr-F2b"/>
@@ -91,6 +99,7 @@
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Tym-8o-ZPc" appends="YES" id="cBI-fi-3bv"/>
                                     <outletCollection property="gestureRecognizers" destination="BrB-5W-hWt" appends="YES" id="2ra-4b-hbL"/>
+                                    <outletCollection property="gestureRecognizers" destination="R9m-8E-sfd" appends="YES" id="pzW-Ze-dHt"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -122,7 +131,12 @@
                 </tapGestureRecognizer>
                 <swipeGestureRecognizer direction="right" id="BrB-5W-hWt">
                     <connections>
-                        <action selector="pageSwiped:" destination="imF-Cj-aef" id="ndz-Zc-R4y"/>
+                        <action selector="pageSwiped:" destination="imF-Cj-aef" id="WZE-EY-9Hy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="R9m-8E-sfd">
+                    <connections>
+                        <action selector="pageSwiped:" destination="imF-Cj-aef" id="13a-RB-b6I"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -165,11 +179,11 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGL-LQ-FVf">
                                         <rect key="frame" x="123.5" y="30" width="52" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6ek-zl-hfE" firstAttribute="trailing" secondItem="FIa-0l-Izo" secondAttribute="trailing" id="3Em-0T-DiC"/>
                                     <constraint firstAttribute="width" constant="300" id="7PB-Pq-yeR"/>
@@ -189,7 +203,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="YTt-B2-6TY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z5U-HD-E32"/>
                             <constraint firstItem="YTt-B2-6TY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kzH-FE-DMl"/>
@@ -204,6 +218,34 @@
             </objects>
             <point key="canvasLocation" x="137.59999999999999" y="133.13343328335833"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="FSa-Ej-Ju8">
+            <objects>
+                <tableViewController id="zpd-Cz-XhZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Udf-it-OUd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5nU-y1-ShP">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nU-y1-ShP" id="u4V-I4-1KH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zpd-Cz-XhZ" id="ocd-X6-wwc"/>
+                            <outlet property="delegate" destination="zpd-Cz-XhZ" id="V4L-io-dyr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8y-qy-ZiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="115"/>
+        </scene>
         <!--Flower View Controller-->
         <scene sceneID="vrz-Hg-eA5">
             <objects>
@@ -211,7 +253,8 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZTU-GI-lOY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3O5-K8-bsL">
                             <size key="itemSize" width="87" height="94"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -232,7 +275,7 @@
                                         </imageView>
                                     </subviews>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="customSize" width="94" height="94"/>
                                 <connections>
@@ -255,6 +298,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="banana" width="1200" height="974"/>
+        <image name="banana" width="200" height="200"/>
     </resources>
 </document>
