@@ -41,8 +41,8 @@
 
 /* Begin PBXFileReference section */
 		470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		4732DB741FB3604100948723 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Animals.json; sourceTree = "<group>"; };
 		4732DB751FB360B200948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Fruits.json; sourceTree = "<group>"; };
+		4732DB761FB3623F00948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Animals.json; sourceTree = "<group>"; };
 		4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		47FFA7BF1F964B3400597789 /* FLowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLowerViewController.swift; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 		4732DB721FB3602700948723 /* Animals.json */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4732DB741FB3604100948723 /* en */,
+				4732DB761FB3623F00948723 /* Base */,
 			);
 			name = Animals.json;
 			sourceTree = "<group>";
