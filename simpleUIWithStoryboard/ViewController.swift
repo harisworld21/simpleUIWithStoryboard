@@ -22,13 +22,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginToCollection(_ sender: Any) {
-        performSegue(withIdentifier: "collectionView", sender: self)
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "collectionView"
-        {
-            print("CollectionView")
-        }
+        
     }
 
 

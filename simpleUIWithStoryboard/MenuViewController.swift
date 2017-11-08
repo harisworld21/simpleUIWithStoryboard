@@ -16,6 +16,7 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var displayView: UIView!
     var childView : FlowerViewController!
     var tmpImgView = UIImageView()
+    var subCategoryName = ""
     
     override func viewDidLoad() {
         container.alpha = 1
@@ -28,6 +29,7 @@ class MenuViewController: UIViewController {
            let viewC = segue.destination as! FlowerViewController
            viewC.masterView = self
             childView = viewC
+            viewC.categoryName = subCategoryName
         }
     }
     

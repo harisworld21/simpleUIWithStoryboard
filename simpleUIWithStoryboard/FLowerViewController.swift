@@ -15,16 +15,20 @@ class FlowerViewController : UICollectionViewController
     let collectionLayout = CustomImageFlowLayout()
     var object = [objects]()
     var currentIndex = 0
+    var categoryName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.collectionViewLayout = collectionLayout
-        parseJSON()
+        if !categoryName.isEmpty
+        {
+            parseJSON(name: categoryName)
+        }
         //collectionView?.backgroundColor = .black
     }
     
-    func parseJSON()
+    func parseJSON(name: String)
     {
-       let str = getjsONFromFile(fileName: "fruits")
+       let str = getjsONFromFile(fileName: name)
        let arr = convertJSONToArray(text: str)
         for dict in arr!
        {

@@ -53,11 +53,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-59-vXY">
-                                        <rect key="frame" x="307" y="621" width="60" height="30"/>
+                                        <rect key="frame" x="291" y="613" width="76" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sfl-59-vXY" secondAttribute="height" multiplier="2:1" id="Tb3-pD-RDR"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <state key="normal" title="Next">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -66,11 +66,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33h-g5-VHb">
-                                        <rect key="frame" x="10" y="619" width="64" height="32"/>
+                                        <rect key="frame" x="10" y="608" width="86" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="33h-g5-VHb" secondAttribute="height" multiplier="2:1" id="hDA-cW-WkO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <state key="normal" title="Previous">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -154,31 +154,32 @@
                                 <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FIa-0l-Izo">
-                                        <rect key="frame" x="20" y="95" width="260" height="30"/>
+                                        <rect key="frame" x="20" y="99.5" width="260" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ek-zl-hfE">
-                                        <rect key="frame" x="20" y="153" width="260" height="30"/>
+                                        <rect key="frame" x="20" y="157.5" width="260" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvP-3H-4mn">
-                                        <rect key="frame" x="20" y="239" width="260" height="30"/>
+                                        <rect key="frame" x="20" y="243.5" width="260" height="38"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="loginToCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKW-rM-Qoi"/>
+                                            <segue destination="zpd-Cz-XhZ" kind="show" id="gYm-Yv-1hw"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGL-LQ-FVf">
-                                        <rect key="frame" x="123.5" y="30" width="52" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="116" y="30" width="67.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -210,30 +211,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="imF-Cj-aef" kind="show" identifier="collectionView" id="01M-zj-QJ8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.59999999999999" y="133.13343328335833"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Category View Contoller-->
         <scene sceneID="FSa-Ej-Ju8">
             <objects>
-                <tableViewController id="zpd-Cz-XhZ" sceneMemberID="viewController">
+                <tableViewController id="zpd-Cz-XhZ" customClass="CategoryViewContoller" customModule="simpleUIWithStoryboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Udf-it-OUd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5nU-y1-ShP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="5nU-y1-ShP">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nU-y1-ShP" id="u4V-I4-1KH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="imF-Cj-aef" kind="show" identifier="subCategorySegue" id="kZ8-7x-dnJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

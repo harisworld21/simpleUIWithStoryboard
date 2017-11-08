@@ -1,0 +1,51 @@
+ [{
+  "name": "bear",
+  "image": "bear",
+  "sound": "baar"
+  },
+  {
+  "name": "beaver",
+  "image": "beaver",
+  "sound": "beaver"
+  },
+  {
+  "name": "buckdeer",
+  "image": "buckdeer",
+  "sound": "buckdeer"
+  },
+  {
+  "name": "doedeer",
+  "image": "doedeer",
+  "sound": "doedeer"
+  },
+  {
+  "name": "duck",
+  "image": "duck",
+  "sound": "duck"
+  },
+  {
+  "name": "fox",
+  "image": "fox",
+  "sound": "fox"
+  },
+  {
+  "name": "rabbit",
+  "image": "rabbit",
+  "sound": "rabbit"
+  },
+  {
+  "name": "raccoon",
+  "image": "raccoon",
+  "sound": "raccoon"
+  },
+  {
+  "name": "snake",
+  "image": "snake",
+  "sound": "snake"
+  },
+  {
+  "name": "squirrel",
+  "image": "squirrel",
+  "sound": "squirrel"
+  }
+  ]
