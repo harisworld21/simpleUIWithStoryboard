@@ -42,10 +42,10 @@
 /* Begin PBXFileReference section */
 		470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4732DB741FB3604100948723 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Animals.json; sourceTree = "<group>"; };
+		4732DB751FB360B200948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Fruits.json; sourceTree = "<group>"; };
 		4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		47FFA7BF1F964B3400597789 /* FLowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLowerViewController.swift; sourceTree = "<group>"; };
-		9819C3421FA9B91800641833 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Fruits.json; sourceTree = "<group>"; };
 		984C26271F7F7FC600BA16DD /* simpleUIWithStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleUIWithStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984C262A1F7F7FC600BA16DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		984C262C1F7F7FC600BA16DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 		9819C3431FA9B91800641833 /* Fruits.json */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9819C3421FA9B91800641833 /* en */,
+				4732DB751FB360B200948723 /* Base */,
 			);
 			name = Fruits.json;
 			sourceTree = "<group>";
