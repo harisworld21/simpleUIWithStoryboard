@@ -27,10 +27,9 @@ class CategoryViewContoller: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! customCell
         let object = objects[indexPath.row]
-        cell.textLabel!.text = object
+        cell.title.text = object
         return cell
     }
     
@@ -58,4 +57,12 @@ class CategoryViewContoller: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+}
+
+class customCell: UITableViewCell
+{
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var img: UIImageView!
+    
+    
 }
