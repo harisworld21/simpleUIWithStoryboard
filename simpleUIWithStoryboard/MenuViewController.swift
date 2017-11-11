@@ -26,10 +26,10 @@ class MenuViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "containerSegue"
         {
-           let viewC = segue.destination as! FlowerViewController
-           viewC.masterView = self
+           let viewC = segue.destination as? FlowerViewController
+           viewC?.masterView = self
             childView = viewC
-            viewC.categoryName = subCategoryName
+            viewC?.categoryName = subCategoryName
         }
     }
     

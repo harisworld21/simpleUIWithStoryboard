@@ -11,6 +11,7 @@ import UIKit
 class CategoryViewContoller: UITableViewController {
     var objects = [String]()
     
+    
     override func viewDidLoad() {
         objects.append("Animals")
         objects.append("Fruits")
@@ -43,8 +44,10 @@ class CategoryViewContoller: UITableViewController {
         {
             if let indexPath = tableView.indexPathForSelectedRow
             {
-                let viewC = segue.destination as! MenuViewController
-                viewC.subCategoryName = objects[indexPath.row]
+                let rootViewController = segue.destination as! UINavigationController
+                let menuVC = rootViewController.topViewController as! MenuViewController
+                menuVC.subCategoryName = objects[indexPath.row]
+                print(menuVC.subCategoryName)
             }
         }
     }
@@ -57,12 +60,24 @@ class CategoryViewContoller: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+    
+    @IBAction func exitOut(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func onExit(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 class customCell: UITableViewCell
 {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var img: UIImageView!
-    
-    
+}
+
+class TableCellContents
+{
+    var title = ""
+    var img = UIImage()
 }
