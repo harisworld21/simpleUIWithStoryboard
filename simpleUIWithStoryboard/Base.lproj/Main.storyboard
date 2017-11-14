@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bIv-Mu-cmR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="koC-VB-Sa6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,19 +55,6 @@
                                             <constraint firstAttribute="width" secondItem="xbI-b6-C5R" secondAttribute="height" multiplier="1:1" id="g3I-M1-Q0e"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYO-5l-pFc">
-                                        <rect key="frame" x="310" y="28" width="51" height="51"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="WYO-5l-pFc" secondAttribute="height" multiplier="1:1" id="1fd-nv-bt1"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closeClicked:" destination="imF-Cj-aef" eventType="touchUpInside" id="gAD-KX-HSh"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-59-vXY">
                                         <rect key="frame" x="291" y="613" width="76" height="38"/>
                                         <constraints>
@@ -101,12 +88,9 @@
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" id="3Ri-kr-F2b"/>
                                     <constraint firstAttribute="bottom" secondItem="sfl-59-vXY" secondAttribute="bottom" constant="16" id="EMk-65-bIM"/>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="centerY" secondItem="Gh4-xE-XRu" secondAttribute="centerY" id="EZN-oL-hV8"/>
-                                    <constraint firstAttribute="trailing" secondItem="WYO-5l-pFc" secondAttribute="trailing" constant="14" id="LKE-gy-p3P"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xbI-b6-C5R" secondAttribute="trailing" id="MlI-g6-YfZ"/>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="top" id="Nsd-cB-nZR"/>
                                     <constraint firstItem="xbI-b6-C5R" firstAttribute="centerX" secondItem="Gh4-xE-XRu" secondAttribute="centerX" id="Q4R-Ud-CrO"/>
-                                    <constraint firstItem="WYO-5l-pFc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="20" symbolic="YES" id="Q5U-5W-kTQ"/>
-                                    <constraint firstItem="WYO-5l-pFc" firstAttribute="top" secondItem="Gh4-xE-XRu" secondAttribute="top" constant="28" id="Rq4-Nm-0hA"/>
                                     <constraint firstAttribute="bottom" secondItem="33h-g5-VHb" secondAttribute="bottom" constant="16" id="dKY-kv-GDO"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xbI-b6-C5R" secondAttribute="bottom" id="iIs-ga-cW3"/>
                                     <constraint firstItem="33h-g5-VHb" firstAttribute="leading" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="10" id="kb7-mo-Drq"/>
@@ -136,19 +120,24 @@
                     <navigationItem key="navigationItem" id="p7X-Br-2M0">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="lES-mm-ARy">
                             <connections>
-                                <action selector="exitOut:" destination="y56-GC-llg" id="A7I-dT-Uqx"/>
-                                <segue destination="zpd-Cz-XhZ" kind="show" id="RMJ-aR-Qzd"/>
+                                <segue destination="koC-VB-Sa6" kind="show" id="yaJ-di-Ssd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="qyd-dU-ZOZ">
+                            <connections>
+                                <action selector="closeClicked:" destination="imF-Cj-aef" id="clx-22-e77"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backBtn" destination="lES-mm-ARy" id="UXg-5R-2t4"/>
+                        <outlet property="closeBtn" destination="qyd-dU-ZOZ" id="lFW-jO-x8R"/>
                         <outlet property="container" destination="8Vj-XR-aJJ" id="cAT-VV-ep9"/>
                         <outlet property="displayView" destination="Gh4-xE-XRu" id="Pfd-3H-DXH"/>
                         <outlet property="imageView" destination="xbI-b6-C5R" id="P1d-cO-X6Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lj4-qH-E5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="y56-GC-llg" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="Tym-8o-ZPc">
                     <connections>
                         <action selector="userTappedImage:" destination="imF-Cj-aef" id="pl9-Sa-tCa"/>
@@ -214,7 +203,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginToCollection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mKW-rM-Qoi"/>
-                                            <segue destination="koC-VB-Sa6" kind="show" id="7tL-bL-fcS"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGL-LQ-FVf">
@@ -286,7 +274,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nU-y1-ShP" id="u4V-I4-1KH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fruits" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-IK-BjJ">
@@ -388,7 +376,4 @@
         <image name="Fruits" width="510" height="170"/>
         <image name="banana" width="200" height="200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="RMJ-aR-Qzd"/>
-    </inferredMetricsTieBreakers>
 </document>
