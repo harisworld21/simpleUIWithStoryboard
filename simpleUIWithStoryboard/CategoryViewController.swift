@@ -9,12 +9,26 @@
 import UIKit
 
 class CategoryViewContoller: UITableViewController {
-    var objects = [String]()
+    var objects = [TableCellContents]()
     
     
     override func viewDidLoad() {
-        objects.append("Animals")
-        objects.append("Fruits")
+        let category = "".getjsONFromFile(fileName: "Category")
+        let arr = category.convertJSONToArray(text: category)
+        for content in arr!
+        {
+            if let dict = content as? [String: String]
+            {
+                let cellContent = TableCellContents()
+                cellContent.title = dict["name"]!
+                if let img = UIImage(named: dict["image"]!)
+                {
+                    cellContent.img = img
+                }
+                objects.append(cellContent)
+            }
+        }
+
     }
     
     // MARK: - Table View
@@ -30,7 +44,8 @@ class CategoryViewContoller: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! customCell
         let object = objects[indexPath.row]
-        cell.title.text = object
+        cell.title.text = object.title
+        cell.img.image = object.img
         return cell
     }
     
@@ -46,7 +61,7 @@ class CategoryViewContoller: UITableViewController {
             {
                 let rootViewController = segue.destination as! UINavigationController
                 let menuVC = rootViewController.topViewController as! MenuViewController
-                menuVC.subCategoryName = objects[indexPath.row]
+                menuVC.subCategoryName = objects[indexPath.row].title
                 print(menuVC.subCategoryName)
             }
         }

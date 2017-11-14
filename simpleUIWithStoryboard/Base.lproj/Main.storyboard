@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-351" y="-763"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--Fruits-->
         <scene sceneID="K8X-GF-Brd">
             <objects>
                 <viewController id="imF-Cj-aef" customClass="MenuViewController" customModule="simpleUIWithStoryboard" customModuleProvider="target" sceneMemberID="viewController">
@@ -117,7 +117,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vek-xT-B6r"/>
                     </view>
-                    <navigationItem key="navigationItem" id="p7X-Br-2M0">
+                    <navigationItem key="navigationItem" title="Fruits" id="p7X-Br-2M0">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="lES-mm-ARy">
                             <connections>
                                 <segue destination="koC-VB-Sa6" kind="show" id="yaJ-di-Ssd"/>
@@ -130,8 +130,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="backBtn" destination="lES-mm-ARy" id="UXg-5R-2t4"/>
-                        <outlet property="closeBtn" destination="qyd-dU-ZOZ" id="lFW-jO-x8R"/>
                         <outlet property="container" destination="8Vj-XR-aJJ" id="cAT-VV-ep9"/>
                         <outlet property="displayView" destination="Gh4-xE-XRu" id="Pfd-3H-DXH"/>
                         <outlet property="imageView" destination="xbI-b6-C5R" id="P1d-cO-X6Q"/>
@@ -261,7 +259,7 @@
             </objects>
             <point key="canvasLocation" x="-260" y="268"/>
         </scene>
-        <!--Category View Contoller-->
+        <!--Category-->
         <scene sceneID="FSa-Ej-Ju8">
             <objects>
                 <tableViewController id="zpd-Cz-XhZ" customClass="CategoryViewContoller" customModule="simpleUIWithStoryboard" customModuleProvider="target" sceneMemberID="viewController">
@@ -274,11 +272,12 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nU-y1-ShP" id="u4V-I4-1KH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fruits" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-IK-BjJ">
+                                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-IK-BjJ">
                                             <rect key="frame" x="100" y="0.0" width="275" height="43.5"/>
+                                            <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rx-48-xhU">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="43.5"/>
@@ -302,6 +301,7 @@
                                         <constraint firstItem="J8t-IK-BjJ" firstAttribute="leading" secondItem="5rx-48-xhU" secondAttribute="trailing" id="zUZ-Bd-ahN"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="img" destination="J8t-IK-BjJ" id="6CL-ym-ASS"/>
                                     <outlet property="title" destination="5rx-48-xhU" id="eav-dX-fDJ"/>
@@ -314,7 +314,7 @@
                             <outlet property="delegate" destination="zpd-Cz-XhZ" id="V4L-io-dyr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="KkM-zP-qoj"/>
+                    <navigationItem key="navigationItem" title="Category" id="KkM-zP-qoj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8y-qy-ZiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -373,7 +373,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Fruits" width="510" height="170"/>
         <image name="banana" width="200" height="200"/>
     </resources>
 </document>

@@ -14,8 +14,6 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var displayView: UIView!
-    @IBOutlet weak var closeBtn: UIBarButtonItem!
-    @IBOutlet weak var backBtn: UIBarButtonItem!
     var childView : FlowerViewController!
     var tmpImgView = UIImageView()
     var subCategoryName = ""
@@ -23,8 +21,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         container.alpha = 1
         displayView.isHidden = true
-        self.navigationItem.rightBarButtonItem = closeBtn
-        self.navigationItem.leftBarButtonItem = backBtn
+        self.navigationItem.title = subCategoryName
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

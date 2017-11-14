@@ -10,6 +10,7 @@
 		470A11FA1F9A4B0C00DE6AC6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */; };
 		4732DB701FB3602700948723 /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 4732DB721FB3602700948723 /* Animals.json */; };
 		4733457E1FB2A23B00FF1BA3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */; };
+		4738D4A71FBB571200374CAD /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 4738D4A51FBB571200374CAD /* Category.json */; };
 		47FF01D61F98809E00B92591 /* CustomImageFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */; };
 		47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FFA7BF1F964B3400597789 /* FLowerViewController.swift */; };
 		9819C3411FA9B91800641833 /* Fruits.json in Resources */ = {isa = PBXBuildFile; fileRef = 9819C3431FA9B91800641833 /* Fruits.json */; };
@@ -44,6 +45,7 @@
 		4732DB751FB360B200948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Fruits.json; sourceTree = "<group>"; };
 		4732DB761FB3623F00948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Animals.json; sourceTree = "<group>"; };
 		4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		4738D4A61FBB571200374CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Category.json; sourceTree = "<group>"; };
 		47FF01D51F98809E00B92591 /* CustomImageFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageFlowLayout.swift; sourceTree = "<group>"; };
 		47FFA7BF1F964B3400597789 /* FLowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FLowerViewController.swift; sourceTree = "<group>"; };
 		984C26271F7F7FC600BA16DD /* simpleUIWithStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleUIWithStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				984C26311F7F7FC700BA16DD /* Assets.xcassets */,
 				984C26331F7F7FC700BA16DD /* LaunchScreen.storyboard */,
 				984C26361F7F7FC700BA16DD /* Info.plist */,
+				4738D4A51FBB571200374CAD /* Category.json */,
 				9819C3431FA9B91800641833 /* Fruits.json */,
 				4732DB721FB3602700948723 /* Animals.json */,
 			);
@@ -253,6 +256,7 @@
 				4732DB701FB3602700948723 /* Animals.json in Resources */,
 				9819C3411FA9B91800641833 /* Fruits.json in Resources */,
 				984C26351F7F7FC700BA16DD /* LaunchScreen.storyboard in Resources */,
+				4738D4A71FBB571200374CAD /* Category.json in Resources */,
 				984C26321F7F7FC700BA16DD /* Assets.xcassets in Resources */,
 				984C26301F7F7FC600BA16DD /* Main.storyboard in Resources */,
 			);
@@ -326,6 +330,14 @@
 				4732DB761FB3623F00948723 /* Base */,
 			);
 			name = Animals.json;
+			sourceTree = "<group>";
+		};
+		4738D4A51FBB571200374CAD /* Category.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4738D4A61FBB571200374CAD /* Base */,
+			);
+			name = Category.json;
 			sourceTree = "<group>";
 		};
 		9819C3431FA9B91800641833 /* Fruits.json */ = {
