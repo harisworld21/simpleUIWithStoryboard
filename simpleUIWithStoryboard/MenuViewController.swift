@@ -57,6 +57,7 @@ class MenuViewController: UIViewController {
         {
             displayView.isHidden = true
             container.alpha = 1
+            self.navigationController?.isNavigationBarHidden = false
         }
         
     }
@@ -151,7 +152,7 @@ class MenuViewController: UIViewController {
         imageView.image = obj.img
         let oldCenter = imageView.frame
         imageView.frame = imgFrame
-
+        self.navigationController?.isNavigationBarHidden = true
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
             self.imageView.frame = oldCenter
