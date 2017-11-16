@@ -67,6 +67,7 @@ class FlowerViewController : UICollectionViewController
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! flowerCell
         cell.img.image = object[indexPath.row].img
+        cell.name.text = object[indexPath.row].name
         return cell
     }
 }
@@ -74,7 +75,7 @@ class FlowerViewController : UICollectionViewController
 class flowerCell: UICollectionViewCell
 {
     @IBOutlet weak var img: UIImageView!
-    
+    @IBOutlet weak var name: UILabel!
 }
 
 class objects
