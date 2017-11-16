@@ -61,7 +61,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="xbI-b6-C5R" secondAttribute="trailing" constant="10" id="Aku-Kj-FYU"/>
                                             <constraint firstAttribute="width" secondItem="s6d-ji-eZs" secondAttribute="height" multiplier="1:1" id="Djv-k2-ZKa"/>
@@ -151,7 +151,9 @@
                     <connections>
                         <outlet property="container" destination="8Vj-XR-aJJ" id="cAT-VV-ep9"/>
                         <outlet property="displayView" destination="Gh4-xE-XRu" id="Pfd-3H-DXH"/>
+                        <outlet property="imagePreview" destination="s6d-ji-eZs" id="NHn-C4-GgW"/>
                         <outlet property="imageView" destination="xbI-b6-C5R" id="P1d-cO-X6Q"/>
+                        <outlet property="labelText" destination="jnm-XH-4vn" id="Nwu-f0-ZIP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lj4-qH-E5z" userLabel="First Responder" sceneMemberID="firstResponder"/>

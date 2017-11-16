@@ -14,6 +14,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var displayView: UIView!
+    @IBOutlet weak var imagePreview: UIView!
+    @IBOutlet weak var labelText: UILabel!
     var childView : FlowerViewController!
     var tmpImgView = UIImageView()
     var subCategoryName = ""
@@ -83,12 +85,12 @@ class MenuViewController: UIViewController {
         if let obj = childView.object as [objects]!
         {
             let curIndex = childView.currentIndex
-            let imgFrame = imageView.frame
+            let imgFrame = imagePreview.frame
             let start = UIScreen.main.bounds.width
-            let frame = CGRect(x:start,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
-            let oldFrame = CGRect(x:-imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
+            let frame = CGRect(x:start,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
+            let oldFrame = CGRect(x:-imgFrame.size.width,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
             tmpImgView.image = imageView.image
-            tmpImgView.frame = imageView.frame
+            tmpImgView.frame = imagePreview.frame
             view.addSubview(tmpImgView)
 
             if curIndex - 1 > 0
@@ -116,12 +118,12 @@ class MenuViewController: UIViewController {
         {
             var curIndex = childView.currentIndex
             curIndex += 1
-            let imgFrame = imageView.frame
+            let imgFrame = imagePreview.frame
             let end = UIScreen.main.bounds.width
-            let frame = CGRect(x:-imgFrame.size.width,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
-            let oldFrame = CGRect(x:end,y:imgFrame.origin.y,width:imgFrame.size.width,height:imgFrame.size.height)
+            let frame = CGRect(x:-imgFrame.size.width,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
+            let oldFrame = CGRect(x:end,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
             tmpImgView.image = imageView.image
-            tmpImgView.frame = imageView.frame
+            tmpImgView.frame = imagePreview.frame
             view.addSubview(tmpImgView)
             if curIndex < obj.count-1
             {
@@ -154,6 +156,7 @@ class MenuViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
             self.imageView.frame = oldCenter
             self.tmpImgView.frame = oldImgFrame
+            self.labelText.text = obj.name
         }) { (success: Bool) in
             self.tmpImgView.removeFromSuperview()
         }
