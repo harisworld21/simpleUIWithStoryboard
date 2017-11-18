@@ -302,42 +302,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="5nU-y1-ShP" customClass="customCell" customModule="simpleUIWithStoryboard" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="87" id="5nU-y1-ShP" customClass="customCell" customModule="simpleUIWithStoryboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nU-y1-ShP" id="u4V-I4-1KH">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="86.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-IK-BjJ">
-                                            <rect key="frame" x="100" y="0.0" width="275" height="43.5"/>
+                                        <imageView opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8t-IK-BjJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                             <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rx-48-xhU">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="43.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="vWY-im-MtT"/>
+                                                <constraint firstAttribute="width" secondItem="J8t-IK-BjJ" secondAttribute="height" multiplier="600:140" id="oPy-3H-p0a"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="J8t-IK-BjJ" firstAttribute="leading" secondItem="5rx-48-xhU" secondAttribute="trailing" id="3Ya-Ca-HcL"/>
-                                        <constraint firstItem="5rx-48-xhU" firstAttribute="top" secondItem="u4V-I4-1KH" secondAttribute="top" id="4Df-eX-a0M"/>
-                                        <constraint firstAttribute="bottom" secondItem="5rx-48-xhU" secondAttribute="bottom" id="6AF-Wo-P2S"/>
                                         <constraint firstItem="J8t-IK-BjJ" firstAttribute="top" secondItem="u4V-I4-1KH" secondAttribute="top" id="GMm-FQ-yLj"/>
-                                        <constraint firstItem="5rx-48-xhU" firstAttribute="leading" secondItem="u4V-I4-1KH" secondAttribute="leading" id="Thh-rO-9U2"/>
-                                        <constraint firstAttribute="trailing" secondItem="J8t-IK-BjJ" secondAttribute="trailing" id="aAN-0m-0Hh"/>
+                                        <constraint firstItem="J8t-IK-BjJ" firstAttribute="leading" secondItem="u4V-I4-1KH" secondAttribute="leading" id="WOh-Sp-xQc"/>
                                         <constraint firstAttribute="bottom" secondItem="J8t-IK-BjJ" secondAttribute="bottom" id="wZn-Sg-M4v"/>
-                                        <constraint firstItem="J8t-IK-BjJ" firstAttribute="leading" secondItem="5rx-48-xhU" secondAttribute="trailing" id="zUZ-Bd-ahN"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="img" destination="J8t-IK-BjJ" id="6CL-ym-ASS"/>
-                                    <outlet property="title" destination="5rx-48-xhU" id="eav-dX-fDJ"/>
                                     <segue destination="N5q-cS-1N5" kind="show" identifier="subCategorySegue" id="XDx-4r-qtE"/>
                                 </connections>
                             </tableViewCell>
@@ -351,7 +339,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8y-qy-ZiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="465" y="268"/>
+            <point key="canvasLocation" x="464.80000000000001" y="267.61619190404798"/>
         </scene>
         <!--Flower View Controller-->
         <scene sceneID="vrz-Hg-eA5">

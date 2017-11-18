@@ -44,7 +44,7 @@ class CategoryViewContoller: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! customCell
         let object = objects[indexPath.row]
-        cell.title.text = object.title
+        //cell.title.text = object.title
         cell.img.image = object.img
         return cell
     }
@@ -53,6 +53,7 @@ class CategoryViewContoller: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return true
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "subCategorySegue"
