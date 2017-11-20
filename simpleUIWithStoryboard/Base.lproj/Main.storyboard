@@ -56,7 +56,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnm-XH-4vn">
                                                 <rect key="frame" x="10" y="276" width="280" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -122,11 +122,11 @@
                                 <constraints>
                                     <constraint firstItem="Ra7-ra-B0L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="20" symbolic="YES" id="2Kk-vV-cnT"/>
                                     <constraint firstAttribute="bottom" secondItem="sfl-59-vXY" secondAttribute="bottom" constant="16" id="EMk-65-bIM"/>
-                                    <constraint firstAttribute="trailing" secondItem="33h-g5-VHb" secondAttribute="trailing" constant="279" id="Zev-pM-ul0"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="33h-g5-VHb" secondAttribute="trailing" id="Zev-pM-ul0"/>
                                     <constraint firstAttribute="bottom" secondItem="33h-g5-VHb" secondAttribute="bottom" constant="16" id="dKY-kv-GDO"/>
                                     <constraint firstItem="s6d-ji-eZs" firstAttribute="centerX" secondItem="Gh4-xE-XRu" secondAttribute="centerX" id="ddi-S5-h4D"/>
                                     <constraint firstItem="Ra7-ra-B0L" firstAttribute="top" secondItem="Gh4-xE-XRu" secondAttribute="top" constant="30" id="eU5-KT-3H5"/>
-                                    <constraint firstItem="33h-g5-VHb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" id="kb7-mo-Drq"/>
+                                    <constraint firstItem="33h-g5-VHb" firstAttribute="leading" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="10" id="kb7-mo-Drq"/>
                                     <constraint firstItem="sfl-59-vXY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="20" symbolic="YES" id="nlQ-PU-y00"/>
                                     <constraint firstAttribute="trailing" secondItem="Ra7-ra-B0L" secondAttribute="trailing" constant="8" id="tQa-RQ-zKw"/>
                                     <constraint firstAttribute="trailing" secondItem="sfl-59-vXY" secondAttribute="trailing" constant="8" id="uit-zM-KAc"/>
@@ -365,8 +365,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ2-e8-wSU">
-                                            <rect key="frame" x="10" y="80" width="80" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="10" y="70" width="80" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -386,7 +386,7 @@
                                     <constraint firstAttribute="trailing" secondItem="kQ1-ce-1x1" secondAttribute="trailing" constant="10" id="KN5-g6-eje"/>
                                     <constraint firstItem="MQ2-e8-wSU" firstAttribute="trailing" secondItem="kQ1-ce-1x1" secondAttribute="trailing" id="KdR-cF-lGa"/>
                                     <constraint firstItem="kQ1-ce-1x1" firstAttribute="leading" secondItem="64J-Ye-2hu" secondAttribute="leading" constant="10" id="lmn-rL-0KS"/>
-                                    <constraint firstItem="MQ2-e8-wSU" firstAttribute="top" secondItem="kQ1-ce-1x1" secondAttribute="bottom" id="uqI-Bz-thK"/>
+                                    <constraint firstItem="MQ2-e8-wSU" firstAttribute="top" secondItem="kQ1-ce-1x1" secondAttribute="bottom" constant="-10" id="uqI-Bz-thK"/>
                                 </constraints>
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>

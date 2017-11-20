@@ -1,50 +1,60 @@
  [{
-  "name": "bear",
+  "name": "Bear",
+  "titleColor": "white",
   "image": "bear",
   "sound": "baar"
   },
   {
-  "name": "beaver",
+  "name": "Beaver",
+  "titleColor": "white",
   "image": "beaver",
   "sound": "beaver"
   },
   {
-  "name": "buckdeer",
+  "name": "Buckdeer",
+  "titleColor": "white",
   "image": "buckdeer",
   "sound": "buckdeer"
   },
   {
-  "name": "doedeer",
+  "name": "Doedeer",
+  "titleColor": "white",
   "image": "doedeer",
   "sound": "doedeer"
   },
   {
-  "name": "duck",
+  "name": "Duck",
+  "titleColor": "white",
   "image": "duck",
   "sound": "duck"
   },
   {
-  "name": "fox",
+  "name": "Fox",
+  "titleColor": "white",
   "image": "fox",
   "sound": "fox"
   },
   {
-  "name": "rabbit",
+  "name": "Rabbit",
+  "titleColor": "white",
   "image": "rabbit",
   "sound": "rabbit"
   },
   {
-  "name": "raccoon",
+  "name": "Raccoon",
+  "titleColor": "white",
   "image": "raccoon",
   "sound": "raccoon"
   },
   {
-  "name": "snake",
+  "name": "Snake",
+  "titleColor": "white",
   "image": "snake",
   "sound": "snake"
   },
   {
-  "name": "squirrel",
+  "name": "Squirrel",
+  "titleColor": "white",
   "image": "squirrel",
   "sound": "squirrel"
   }

@@ -88,8 +88,8 @@ class MenuViewController: UIViewController {
             let curIndex = childView.currentIndex
             let imgFrame = imagePreview.frame
             let start = UIScreen.main.bounds.width
-            let frame = CGRect(x:start,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
-            let oldFrame = CGRect(x:-imgFrame.size.width,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
+            let frame = CGRect(x:start,y:imgFrame.origin.y + (imgFrame.height/2),width:0,height:0)
+            let oldFrame = CGRect(x:-imgFrame.size.width,y:UIScreen.main.bounds.height/2,width:0,height:0)
             tmpImgView.image = imageView.image
             tmpImgView.frame = imagePreview.frame
             view.addSubview(tmpImgView)
@@ -121,8 +121,8 @@ class MenuViewController: UIViewController {
             curIndex += 1
             let imgFrame = imagePreview.frame
             let end = UIScreen.main.bounds.width
-            let frame = CGRect(x:-imgFrame.size.width,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
-            let oldFrame = CGRect(x:end,y:UIScreen.main.bounds.height,width:imgFrame.size.width,height:imgFrame.size.height)
+            let frame = CGRect(x:-end/2,y:UIScreen.main.bounds.height/2,width:0,height:0)
+            let oldFrame = CGRect(x:end ,y: imgFrame.origin.y + (imgFrame.height/2) ,width:0,height:0)
             tmpImgView.image = imageView.image
             tmpImgView.frame = imagePreview.frame
             view.addSubview(tmpImgView)
@@ -150,17 +150,38 @@ class MenuViewController: UIViewController {
         displayView.isHidden = false
         container.alpha = 0.4
         imageView.image = obj.img
-        let oldCenter = imageView.frame
-        imageView.frame = imgFrame
+        //let oldCenter = imageView.frame
+        //imageView.frame = imgFrame
         self.navigationController?.isNavigationBarHidden = true
-        
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {
+        self.startAnimation(startPos: imgFrame, endPos: imageView.frame, aspect: imageView, disappear: false)
+        self.startAnimation(startPos: tmpImgView.frame, endPos: oldImgFrame, aspect: tmpImgView, disappear: true)
+       /* UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             self.imageView.frame = oldCenter
             self.tmpImgView.frame = oldImgFrame
             self.labelText.text = obj.name
+            let color = UIColor.clear
+            if let textColor = color.getColor(obj.titleColor)
+            {
+                self.labelText.textColor = textColor
+            }
         }) { (success: Bool) in
             self.tmpImgView.removeFromSuperview()
-        }
+        }*/
     }
     
+}
+
+extension MenuViewController
+{
+    func startAnimation(startPos: CGRect, endPos: CGRect, aspect: UIImageView, disappear:Bool) -> () {
+        aspect.frame = startPos
+        UIView.animate(withDuration: 0.5, animations: {
+            aspect.frame = endPos
+        }){ (success: Bool) in
+            if disappear
+            {
+                aspect.removeFromSuperview()
+            }
+        }
+    }
 }

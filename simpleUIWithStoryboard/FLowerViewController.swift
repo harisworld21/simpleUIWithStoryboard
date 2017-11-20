@@ -42,6 +42,7 @@ class FlowerViewController : UICollectionViewController
             }
             obj.name = dict1["name"] as! String
             obj.sound = dict1["sound"] as! String
+            obj.titleColor = dict1["titleColor"] as! String
             object.append(obj)
         }
         }
@@ -68,6 +69,11 @@ class FlowerViewController : UICollectionViewController
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! flowerCell
         cell.img.image = object[indexPath.row].img
         cell.name.text = object[indexPath.row].name
+        let color = UIColor.clear
+        if let textColor = color.getColor(object[indexPath.row].titleColor)
+        {
+            cell.name.textColor = textColor
+        }
         return cell
     }
 }
@@ -83,6 +89,20 @@ class objects
     var img = UIImage()
     var name = ""
     var sound = ""
+    var titleColor=""
+}
+
+extension UIColor
+{
+    func getColor(_ name: String) -> UIColor? {
+        let selector = Selector("\(name)Color")
+        if UIColor.self.responds(to: selector) {
+            let color = UIColor.self.perform(selector).takeUnretainedValue()
+            return (color as! UIColor)
+        } else {
+            return nil
+        }
+    }
 }
 
 
