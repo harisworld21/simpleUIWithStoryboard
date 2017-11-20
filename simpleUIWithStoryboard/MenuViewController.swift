@@ -150,30 +150,24 @@ class MenuViewController: UIViewController {
         displayView.isHidden = false
         container.alpha = 0.4
         imageView.image = obj.img
-        //let oldCenter = imageView.frame
-        //imageView.frame = imgFrame
         self.navigationController?.isNavigationBarHidden = true
-        self.startAnimation(startPos: imgFrame, endPos: imageView.frame, aspect: imageView, disappear: false)
-        self.startAnimation(startPos: tmpImgView.frame, endPos: oldImgFrame, aspect: tmpImgView, disappear: true)
-       /* UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
-            self.imageView.frame = oldCenter
-            self.tmpImgView.frame = oldImgFrame
-            self.labelText.text = obj.name
-            let color = UIColor.clear
-            if let textColor = color.getColor(obj.titleColor)
-            {
-                self.labelText.textColor = textColor
-            }
-        }) { (success: Bool) in
-            self.tmpImgView.removeFromSuperview()
-        }*/
+        startImageAnimation(startPos: imgFrame, endPos: imageView.frame, aspect: imageView, disappear: false)
+        startImageAnimation(startPos: tmpImgView.frame, endPos: oldImgFrame, aspect: tmpImgView, disappear: true)
+        
+        let color = UIColor.clear
+        if let textColor = color.getColor(obj.titleColor)
+        {
+            self.labelText.textColor = textColor
+        }
+        startLabelAnimation(aspect: self.labelText, name: obj.name)
+       
     }
     
 }
 
 extension MenuViewController
 {
-    func startAnimation(startPos: CGRect, endPos: CGRect, aspect: UIImageView, disappear:Bool) -> () {
+    func startImageAnimation(startPos: CGRect, endPos: CGRect, aspect: UIImageView, disappear:Bool) -> () {
         aspect.frame = startPos
         UIView.animate(withDuration: 0.5, animations: {
             aspect.frame = endPos
@@ -183,5 +177,18 @@ extension MenuViewController
                 aspect.removeFromSuperview()
             }
         }
+    }
+    
+    func startLabelAnimation(aspect: UILabel, name: String) -> () {
+        let actualFrame = aspect.frame
+        let newFrame = CGRect(x:0,y: 0,width:0,height:0)
+        UIView.animate(withDuration: 1, animations: {
+            aspect.frame = newFrame
+        }){ (success: Bool) in
+            aspect.text = name
+        }
+        UIView.animate(withDuration: 1, animations: {
+            aspect.frame = actualFrame
+        })
     }
 }
