@@ -14,7 +14,6 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var displayView: UIView!
-    @IBOutlet weak var imagePreview: UIView!
     @IBOutlet weak var labelText: UILabel!
     var childView : FlowerViewController!
     var tmpImgView = UIImageView()
@@ -86,15 +85,15 @@ class MenuViewController: UIViewController {
         if let obj = childView.object as [objects]!
         {
             let curIndex = childView.currentIndex
-            let imgFrame = imagePreview.frame
+            let imgFrame = imageView.frame
             let start = UIScreen.main.bounds.width
             let frame = CGRect(x:start,y:imgFrame.origin.y + (imgFrame.height/2),width:0,height:0)
             let oldFrame = CGRect(x:-imgFrame.size.width,y:UIScreen.main.bounds.height/2,width:0,height:0)
             tmpImgView.image = imageView.image
-            tmpImgView.frame = imagePreview.frame
+            tmpImgView.frame = imageView.frame
             view.addSubview(tmpImgView)
 
-            if curIndex - 1 > 0
+            if curIndex - 1 >= 0
             {
                 if let prev = obj[curIndex-1] as objects!
                 {
@@ -119,16 +118,16 @@ class MenuViewController: UIViewController {
         {
             var curIndex = childView.currentIndex
             curIndex += 1
-            let imgFrame = imagePreview.frame
+            let imgFrame = imageView.frame
             let end = UIScreen.main.bounds.width
-            let frame = CGRect(x:-end/2,y:UIScreen.main.bounds.height/2,width:0,height:0)
+            let frame = CGRect(x:UIScreen.main.bounds.origin.x,y:imgFrame.origin.y + (imgFrame.height/2),width:0,height:0)
             let oldFrame = CGRect(x:end ,y: imgFrame.origin.y + (imgFrame.height/2) ,width:0,height:0)
             tmpImgView.image = imageView.image
-            tmpImgView.frame = imagePreview.frame
+            tmpImgView.frame = imageView.frame
             view.addSubview(tmpImgView)
-            if curIndex < obj.count-1
+            if curIndex < obj.count
             {
-                if let prev = obj[curIndex+1] as objects!
+                if let prev = obj[curIndex] as objects!
                 {
                 childView.currentIndex += 1
                     selectedSegue(obj: prev, imgFrame: frame, oldImgFrame: oldFrame)
@@ -151,14 +150,13 @@ class MenuViewController: UIViewController {
         container.alpha = 0.4
         imageView.image = obj.img
         self.navigationController?.isNavigationBarHidden = true
-        startImageAnimation(startPos: imgFrame, endPos: imageView.frame, aspect: imageView, disappear: false)
-        startImageAnimation(startPos: tmpImgView.frame, endPos: oldImgFrame, aspect: tmpImgView, disappear: true)
-        
         let color = UIColor.clear
         if let textColor = color.getColor(obj.titleColor)
         {
             self.labelText.textColor = textColor
         }
+        startImageAnimation(startPos: imgFrame, endPos: imageView.frame, aspect: imageView, disappear: false)
+        startImageAnimation(startPos: tmpImgView.frame, endPos: oldImgFrame, aspect: tmpImgView, disappear: true)
         startLabelAnimation(aspect: self.labelText, name: obj.name)
        
     }
@@ -172,23 +170,36 @@ extension MenuViewController
         UIView.animate(withDuration: 0.5, animations: {
             aspect.frame = endPos
         }){ (success: Bool) in
-            if disappear
-            {
-                aspect.removeFromSuperview()
+            UIView.animate(withDuration: 0.2, animations: {
+                aspect.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
+            })
+            {(success: Bool) in
+                UIView.animate(withDuration: 0.3, animations: {
+                aspect.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+                if disappear
+                {
+                    aspect.removeFromSuperview()
+                }
+                })
             }
         }
+        
     }
     
     func startLabelAnimation(aspect: UILabel, name: String) -> () {
-        let actualFrame = aspect.frame
-        let newFrame = CGRect(x:0,y: 0,width:0,height:0)
-        UIView.animate(withDuration: 1, animations: {
-            aspect.frame = newFrame
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            aspect.transform = CGAffineTransform.init(scaleX: 0, y: 0)
         }){ (success: Bool) in
             aspect.text = name
+            UIView.animate(withDuration: 0.4, animations: {
+            aspect.transform = CGAffineTransform.init(scaleX: 1.5, y: 1.5)
+            }){(success: Bool) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    aspect.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+                })
+            }
+            
         }
-        UIView.animate(withDuration: 1, animations: {
-            aspect.frame = actualFrame
-        })
     }
 }

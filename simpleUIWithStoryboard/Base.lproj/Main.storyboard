@@ -44,38 +44,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh4-xE-XRu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6d-ji-eZs">
-                                        <rect key="frame" x="37" y="183" width="300" height="300"/>
-                                        <subviews>
-                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-b6-C5R">
-                                                <rect key="frame" x="10" y="0.0" width="280" height="280"/>
-                                                <gestureRecognizers/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="xbI-b6-C5R" secondAttribute="height" multiplier="1:1" id="a1q-QR-Itn"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnm-XH-4vn">
-                                                <rect key="frame" x="10" y="276" width="280" height="24"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banana" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-b6-C5R">
+                                        <rect key="frame" x="47" y="193" width="280" height="280"/>
+                                        <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="xbI-b6-C5R" secondAttribute="trailing" constant="10" id="Aku-Kj-FYU"/>
-                                            <constraint firstAttribute="width" secondItem="s6d-ji-eZs" secondAttribute="height" multiplier="1:1" id="Djv-k2-ZKa"/>
-                                            <constraint firstAttribute="bottom" secondItem="jnm-XH-4vn" secondAttribute="bottom" id="FJB-QE-46X"/>
-                                            <constraint firstAttribute="trailing" secondItem="jnm-XH-4vn" secondAttribute="trailing" constant="10" id="Hhu-Ba-f1z"/>
-                                            <constraint firstItem="xbI-b6-C5R" firstAttribute="leading" secondItem="s6d-ji-eZs" secondAttribute="leading" constant="10" id="L5Y-dZ-Ury"/>
-                                            <constraint firstItem="xbI-b6-C5R" firstAttribute="top" secondItem="s6d-ji-eZs" secondAttribute="top" id="Ubf-sk-bRE"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="inU-c0-Zgm"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="qZV-SH-fk9"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="qee-G0-7Po"/>
-                                            <constraint firstItem="jnm-XH-4vn" firstAttribute="leading" secondItem="s6d-ji-eZs" secondAttribute="leading" constant="10" id="w8b-vi-HXA"/>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="wQS-uJ-gdT"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="3cn-BO-0Qb"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="BQF-h5-1cC"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="600" id="JSj-nW-fhc"/>
+                                            <constraint firstAttribute="width" secondItem="xbI-b6-C5R" secondAttribute="height" multiplier="1:1" id="a1q-QR-Itn"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="zBw-rx-znu"/>
                                         </constraints>
-                                    </view>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnm-XH-4vn">
+                                        <rect key="frame" x="161" y="473" width="52" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-59-vXY">
                                         <rect key="frame" x="291" y="613" width="76" height="38"/>
                                         <constraints>
@@ -120,17 +105,19 @@
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.58823529411764708" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="jnm-XH-4vn" firstAttribute="centerX" secondItem="xbI-b6-C5R" secondAttribute="centerX" id="07U-xB-8Q1"/>
+                                    <constraint firstItem="xbI-b6-C5R" firstAttribute="centerY" secondItem="Gh4-xE-XRu" secondAttribute="centerY" id="2KP-y8-uiA"/>
                                     <constraint firstItem="Ra7-ra-B0L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="20" symbolic="YES" id="2Kk-vV-cnT"/>
+                                    <constraint firstItem="xbI-b6-C5R" firstAttribute="centerX" secondItem="Gh4-xE-XRu" secondAttribute="centerX" id="3GS-5j-du2"/>
                                     <constraint firstAttribute="bottom" secondItem="sfl-59-vXY" secondAttribute="bottom" constant="16" id="EMk-65-bIM"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="33h-g5-VHb" secondAttribute="trailing" id="Zev-pM-ul0"/>
                                     <constraint firstAttribute="bottom" secondItem="33h-g5-VHb" secondAttribute="bottom" constant="16" id="dKY-kv-GDO"/>
-                                    <constraint firstItem="s6d-ji-eZs" firstAttribute="centerX" secondItem="Gh4-xE-XRu" secondAttribute="centerX" id="ddi-S5-h4D"/>
                                     <constraint firstItem="Ra7-ra-B0L" firstAttribute="top" secondItem="Gh4-xE-XRu" secondAttribute="top" constant="30" id="eU5-KT-3H5"/>
+                                    <constraint firstItem="jnm-XH-4vn" firstAttribute="top" secondItem="xbI-b6-C5R" secondAttribute="bottom" id="fy0-gk-kSX"/>
                                     <constraint firstItem="33h-g5-VHb" firstAttribute="leading" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="10" id="kb7-mo-Drq"/>
                                     <constraint firstItem="sfl-59-vXY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gh4-xE-XRu" secondAttribute="leading" constant="20" symbolic="YES" id="nlQ-PU-y00"/>
                                     <constraint firstAttribute="trailing" secondItem="Ra7-ra-B0L" secondAttribute="trailing" constant="8" id="tQa-RQ-zKw"/>
                                     <constraint firstAttribute="trailing" secondItem="sfl-59-vXY" secondAttribute="trailing" constant="8" id="uit-zM-KAc"/>
-                                    <constraint firstItem="s6d-ji-eZs" firstAttribute="centerY" secondItem="Gh4-xE-XRu" secondAttribute="centerY" id="vqP-So-9jb"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Tym-8o-ZPc" appends="YES" id="cBI-fi-3bv"/>
@@ -163,7 +150,6 @@
                     <connections>
                         <outlet property="container" destination="8Vj-XR-aJJ" id="cAT-VV-ep9"/>
                         <outlet property="displayView" destination="Gh4-xE-XRu" id="Pfd-3H-DXH"/>
-                        <outlet property="imagePreview" destination="s6d-ji-eZs" id="NHn-C4-GgW"/>
                         <outlet property="imageView" destination="xbI-b6-C5R" id="P1d-cO-X6Q"/>
                         <outlet property="labelText" destination="jnm-XH-4vn" id="Nwu-f0-ZIP"/>
                     </connections>
