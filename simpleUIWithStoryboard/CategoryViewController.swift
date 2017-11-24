@@ -28,7 +28,10 @@ class CategoryViewContoller: UITableViewController {
                 objects.append(cellContent)
             }
         }
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     // MARK: - Table View
@@ -54,6 +57,18 @@ class CategoryViewContoller: UITableViewController {
         return true
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        var contentHeight = CGFloat(0)
+        for row in (0 ..< objects.count) {
+            let indexPath = NSIndexPath(row: row, section: 0)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
+            contentHeight += cell.frame.height
+        }
+        let tableHeight = tableView.frame.height
+        let headerHeight = (tableHeight - contentHeight) / 2 - (contentHeight)
+        return headerHeight
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "subCategorySegue"
@@ -69,12 +84,15 @@ class CategoryViewContoller: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
+       
+    }
+    
+
+ 
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect.zero)
+        view.backgroundColor = UIColor.clear
+        return view
     }
     
     @IBAction func exitOut(_ sender: Any) {
