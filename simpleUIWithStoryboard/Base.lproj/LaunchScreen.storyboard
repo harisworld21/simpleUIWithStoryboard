@@ -18,19 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHAKUNSUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTw-Zq-KBH">
-                                <rect key="frame" x="105" y="317.5" width="164.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home screen" translatesAutoresizingMaskIntoConstraints="NO" id="uwJ-js-DCj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="yTw-Zq-KBH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="MVm-Jx-kZb"/>
-                            <constraint firstItem="yTw-Zq-KBH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eUp-Ps-2PJ"/>
+                            <constraint firstItem="uwJ-js-DCj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EeC-6A-fb1"/>
+                            <constraint firstItem="uwJ-js-DCj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cQC-3q-ANr"/>
+                            <constraint firstItem="uwJ-js-DCj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="chh-md-3eB"/>
+                            <constraint firstItem="uwJ-js-DCj" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="oXi-cQ-bKz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,4 +37,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Home screen" width="384" height="600"/>
+    </resources>
 </document>

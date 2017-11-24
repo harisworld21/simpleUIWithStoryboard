@@ -1,0 +1,23 @@
+ [
+  {
+  "name": "Alphabets",
+  "image": "cat-abc",
+  },
+  {
+  "name": "Numbers",
+  "image": "cat-123",
+  },
+  {
+  "name": "Fruits",
+  "image": "cat-fruits",
+  },
+  {
+  "name": "Animals",
+  "image": "cat-animals"
+  },
+  {
+  "name": "Vehicles",
+  "image": "cat-vehicles",
+  }
+  
+]
