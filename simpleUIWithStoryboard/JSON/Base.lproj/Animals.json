@@ -2,7 +2,7 @@
   "name": "Bear",
   "titleColor": "white",
   "image": "bear",
-  "sound": "baar"
+  "sound": "bear"
   },
   {
   "name": "Beaver",
@@ -14,13 +14,13 @@
   "name": "Buckdeer",
   "titleColor": "white",
   "image": "buckdeer",
-  "sound": "buckdeer"
+  "sound": "buckdear"
   },
   {
   "name": "Doedeer",
   "titleColor": "white",
   "image": "doedeer",
-  "sound": "doedeer"
+  "sound": "doedear"
   },
   {
   "name": "Duck",

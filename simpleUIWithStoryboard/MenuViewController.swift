@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 class MenuViewController: UIViewController {
     
@@ -36,7 +37,19 @@ class MenuViewController: UIViewController {
     }
     
     func playSound(fileName: String) {
-        let url = Bundle.main.url(forResource: fileName, withExtension: "mp3")!
+        
+        if let soundUrl = Bundle.main.url(forResource: fileName, withExtension: "mp3") {
+            var soundId: SystemSoundID = 0
+            
+            AudioServicesCreateSystemSoundID(soundUrl as CFURL, &soundId)
+            
+            AudioServicesAddSystemSoundCompletion(soundId, nil, nil, { (soundId, clientData) -> Void in
+                AudioServicesDisposeSystemSoundID(soundId)
+            }, nil)
+            
+            AudioServicesPlaySystemSound(soundId)
+        }
+        /*let url = Bundle.main.url(forResource: fileName, withExtension: "mp3")!
         
         do {
             let player = try AVAudioPlayer(contentsOf: url)
@@ -44,7 +57,7 @@ class MenuViewController: UIViewController {
             player.play()
         } catch let error as NSError {
             print(error.description)
-        }
+        }*/
     }
     
     @IBAction func userTappedImage(_ sender: Any) {
@@ -155,8 +168,8 @@ class MenuViewController: UIViewController {
         {
             self.labelText.textColor = textColor
         }
-        startImageAnimation(startPos: imgFrame, endPos: imageView.frame, aspect: imageView, disappear: false)
-        startImageAnimation(startPos: tmpImgView.frame, endPos: oldImgFrame, aspect: tmpImgView, disappear: true)
+        startImageAnimation(startPos: imgFrame, endPos: imageView.frame, aspect: imageView, disappear: false, obj: obj)
+        startImageAnimation(startPos: tmpImgView.frame, endPos: oldImgFrame, aspect: tmpImgView, disappear: true, obj: obj)
         startLabelAnimation(aspect: self.labelText, name: obj.name)
        
     }
@@ -165,11 +178,12 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController
 {
-    func startImageAnimation(startPos: CGRect, endPos: CGRect, aspect: UIImageView, disappear:Bool) -> () {
+    func startImageAnimation(startPos: CGRect, endPos: CGRect, aspect: UIImageView, disappear:Bool, obj: objects) -> () {
         aspect.frame = startPos
         UIView.animate(withDuration: 0.5, animations: {
             aspect.frame = endPos
         }){ (success: Bool) in
+            self.playSound(fileName: obj.sound)
             UIView.animate(withDuration: 0.2, animations: {
                 aspect.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             })
@@ -189,7 +203,7 @@ extension MenuViewController
     func startLabelAnimation(aspect: UILabel, name: String) -> () {
         
         UIView.animate(withDuration: 0.3, animations: {
-            aspect.transform = CGAffineTransform.init(scaleX: 0, y: 0)
+            aspect.transform = CGAffineTransform.init(scaleX: 0.2, y: 0.2)
         }){ (success: Bool) in
             aspect.text = name
             UIView.animate(withDuration: 0.4, animations: {
