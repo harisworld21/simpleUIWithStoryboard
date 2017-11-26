@@ -12,10 +12,13 @@ import AudioToolbox
 
 class MenuViewController: UIViewController {
     
+    @IBOutlet weak var soundOnOff: UIButton!
+    @IBOutlet weak var autoOnOff: UIButton!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var displayView: UIView!
     @IBOutlet weak var labelText: UILabel!
+    var autoTimer =  Timer()
     var childView : FlowerViewController!
     var tmpImgView = UIImageView()
     var subCategoryName = ""
@@ -24,6 +27,48 @@ class MenuViewController: UIViewController {
         container.alpha = 1
         displayView.isHidden = true
         self.navigationItem.title = subCategoryName
+        autoPlayState()
+        soundMuteState()
+    }
+    
+    func autoPlayState()
+    {
+        if let state = UserDefaults.standard.value(forKey: "autoplay_state") as? Bool
+        {
+            if Bool(state)
+            {
+                autoOnOff.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
+                startAutoPlay()
+            }
+            else
+            {
+                autoOnOff.setImage(#imageLiteral(resourceName: "start"), for: .normal)
+                stopAutoPlay()
+            }
+        }
+        else
+        {
+            UserDefaults.standard.set(true, forKey: "autoplay_state")
+        }
+    }
+
+    func soundMuteState()
+    {
+        if let state = UserDefaults.standard.value(forKey: "mute_state") as? Bool
+        {
+            if Bool(state)
+            {
+                soundOnOff.setImage(#imageLiteral(resourceName: "sound_on"), for: .normal)
+            }
+            else
+            {
+                soundOnOff.setImage(#imageLiteral(resourceName: "sound_off"), for: .normal)
+            }
+        }
+        else
+        {
+            UserDefaults.standard.set(true, forKey: "mute_state")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -37,7 +82,13 @@ class MenuViewController: UIViewController {
     }
     
     func playSound(fileName: String) {
-        
+        if let state = UserDefaults.standard.value(forKey: "mute_state") as? Bool
+        {
+            if !state
+            {
+                return
+            }
+        }
         if let soundUrl = Bundle.main.url(forResource: fileName, withExtension: "mp3") {
             var soundId: SystemSoundID = 0
             
@@ -59,6 +110,56 @@ class MenuViewController: UIViewController {
             print(error.description)
         }*/
     }
+    
+    @objc func somAction() {
+        findNext()
+    }
+    
+    func startAutoPlay()
+    {
+        autoTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MenuViewController.somAction), userInfo: nil, repeats: true)
+        autoTimer.fire()
+    }
+    
+    func stopAutoPlay()
+    {
+        UserDefaults.standard.set(true, forKey: "autoplay_state")
+    }
+    
+    @IBAction func autoPlay(_ sender: Any) {
+        if let state = UserDefaults.standard.value(forKey: "autoplay_state") as? Bool
+        {
+            if Bool(state)
+            {
+                autoOnOff.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
+                UserDefaults.standard.set(false, forKey: "autoplay_state")
+                startAutoPlay()
+            }
+            else
+            {
+                autoTimer.invalidate()
+                autoOnOff.setImage(#imageLiteral(resourceName: "start"), for: .normal)
+                stopAutoPlay()
+            }
+        }
+    }
+    
+    @IBAction func soundOnOff(_ sender: Any) {
+        if let state = UserDefaults.standard.value(forKey: "mute_state") as? Bool
+        {
+            if Bool(state)
+            {
+                soundOnOff.setImage(#imageLiteral(resourceName: "sound_off"), for: .normal)
+                UserDefaults.standard.set(false, forKey: "mute_state")
+            }
+            else
+            {
+                soundOnOff.setImage(#imageLiteral(resourceName: "sound_on"), for: .normal)
+                UserDefaults.standard.set(true, forKey: "mute_state")
+            }
+        }
+    }
+    
     
     @IBAction func userTappedImage(_ sender: Any) {
         //closeClicked(sender)
