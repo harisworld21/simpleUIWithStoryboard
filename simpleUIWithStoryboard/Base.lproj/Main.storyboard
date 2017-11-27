@@ -66,8 +66,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfl-59-vXY">
                                         <rect key="frame" x="296" y="537" width="71" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="OZO-wA-Ngg"/>
-                                            <constraint firstAttribute="width" constant="71" id="g3t-Tt-4s5"/>
+                                            <constraint firstAttribute="width" secondItem="sfl-59-vXY" secondAttribute="height" multiplier="71:50" id="7q5-zM-Fqe"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="71" id="g3t-Tt-4s5"/>
                                         </constraints>
                                         <state key="normal" title="Next" image="arrow-right">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,8 +79,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33h-g5-VHb">
                                         <rect key="frame" x="10" y="537" width="71" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="lKQ-42-RsN"/>
-                                            <constraint firstAttribute="width" constant="71" id="sh8-Bt-ArS"/>
+                                            <constraint firstAttribute="width" secondItem="33h-g5-VHb" secondAttribute="height" multiplier="71:50" id="f5b-4I-pil"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="71" id="sh8-Bt-ArS"/>
                                         </constraints>
                                         <state key="normal" title="Previous" image="arrow-left">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
