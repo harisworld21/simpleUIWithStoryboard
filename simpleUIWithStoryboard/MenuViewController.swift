@@ -117,13 +117,15 @@ class MenuViewController: UIViewController {
     
     func startAutoPlay()
     {
+        UserDefaults.standard.set(true, forKey: "autoplay_state")
         autoTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MenuViewController.somAction), userInfo: nil, repeats: true)
         autoTimer.fire()
     }
     
     func stopAutoPlay()
     {
-        UserDefaults.standard.set(true, forKey: "autoplay_state")
+        UserDefaults.standard.set(false, forKey: "autoplay_state")
+        autoTimer.invalidate()
     }
     
     @IBAction func autoPlay(_ sender: Any) {
@@ -131,15 +133,13 @@ class MenuViewController: UIViewController {
         {
             if Bool(state)
             {
-                autoOnOff.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
-                UserDefaults.standard.set(false, forKey: "autoplay_state")
-                startAutoPlay()
+                autoOnOff.setImage(#imageLiteral(resourceName: "start"), for: .normal)
+                stopAutoPlay()
             }
             else
             {
-                autoTimer.invalidate()
-                autoOnOff.setImage(#imageLiteral(resourceName: "start"), for: .normal)
-                stopAutoPlay()
+                autoOnOff.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
+                startAutoPlay()
             }
         }
     }
@@ -171,6 +171,7 @@ class MenuViewController: UIViewController {
             displayView.isHidden = true
             container.alpha = 1
             self.navigationController?.isNavigationBarHidden = false
+            stopAutoPlay()
         }
         
     }
