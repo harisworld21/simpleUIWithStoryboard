@@ -11,6 +11,7 @@
 		4732DB701FB3602700948723 /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 4732DB721FB3602700948723 /* Animals.json */; };
 		4733457E1FB2A23B00FF1BA3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */; };
 		4738D4A71FBB571200374CAD /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 4738D4A51FBB571200374CAD /* Category.json */; };
+		476410581FCE6237006171D5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476410571FCE6237006171D5 /* GoogleMobileAds.framework */; };
 		47E61AB71FC8610E0025DDDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E61AB51FC8610E0025DDDC /* LaunchScreen.storyboard */; };
 		47E61ABE1FC870140025DDDC /* Vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = 47E61AB81FC870130025DDDC /* Vehicles.json */; };
 		47E61ABF1FC870140025DDDC /* Alphabets.json in Resources */ = {isa = PBXBuildFile; fileRef = 47E61ABA1FC870130025DDDC /* Alphabets.json */; };
@@ -115,6 +116,7 @@
 		4732DB761FB3623F00948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Animals.json; sourceTree = "<group>"; };
 		4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		4738D4A61FBB571200374CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Category.json; sourceTree = "<group>"; };
+		476410571FCE6237006171D5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = simpleUIWithStoryboard/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		47E61AB61FC8610E0025DDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47E61AB91FC870130025DDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Vehicles.json; sourceTree = "<group>"; };
 		47E61ABB1FC870130025DDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Alphabets.json; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476410581FCE6237006171D5 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				984C26291F7F7FC600BA16DD /* simpleUIWithStoryboard */,
+				476410571FCE6237006171D5 /* GoogleMobileAds.framework */,
 				984C263E1F7F7FC700BA16DD /* simpleUIWithStoryboardTests */,
 				984C26491F7F7FC700BA16DD /* simpleUIWithStoryboardUITests */,
 				984C26281F7F7FC600BA16DD /* Products */,
@@ -797,6 +801,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LWQS96PGKL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/simpleUIWithStoryboard",
+					"$(PROJECT_DIR)/simpleUIWithStoryboardUITests",
+				);
 				INFOPLIST_FILE = simpleUIWithStoryboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -813,6 +822,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LWQS96PGKL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/simpleUIWithStoryboard",
+					"$(PROJECT_DIR)/simpleUIWithStoryboardUITests",
+				);
 				INFOPLIST_FILE = simpleUIWithStoryboard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
