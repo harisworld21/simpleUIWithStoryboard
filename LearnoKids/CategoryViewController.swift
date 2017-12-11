@@ -11,7 +11,7 @@ import UIKit
 
 class CategoryViewContoller: UITableViewController {
     var objects = [TableCellContents]()
-    @IBOutlet weak var bannerView: UIView!
+
     override func viewDidLoad() {
         let category = "".getjsONFromFile(fileName: "Category")
         let arr = category.convertJSONToArray(text: category)
@@ -28,20 +28,8 @@ class CategoryViewContoller: UITableViewController {
                 objects.append(cellContent)
             }
         }
-        AdPreview.sharedInstance.setUpAd()
     }
 
-    
-    func initAd()
-    {
-//        tableView.tableFooterView = bannerView
-       AdPreview.sharedInstance.loadAd(viewC: self, banner: bannerView)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        initAd()
-    }
-    
     // MARK: - Table View
     
     override func numberOfSections(in tableView: UITableView) -> Int {

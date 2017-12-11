@@ -11,6 +11,7 @@
 		471ED3421FD06E5200AFA6C4 /* AdPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471ED3411FD06E5200AFA6C4 /* AdPreview.swift */; };
 		4732DB701FB3602700948723 /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 4732DB721FB3602700948723 /* Animals.json */; };
 		4733457E1FB2A23B00FF1BA3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */; };
+		4733CB281FDEF02E003C51A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733CB271FDEF02E003C51A8 /* ViewController.swift */; };
 		4738D4A71FBB571200374CAD /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 4738D4A51FBB571200374CAD /* Category.json */; };
 		47CB28CC1FD9ACF2000F7E85 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CB28CB1FD9ACF2000F7E85 /* GoogleMobileAds.framework */; };
 		47E61AB71FC8610E0025DDDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E61AB51FC8610E0025DDDC /* LaunchScreen.storyboard */; };
@@ -117,6 +118,7 @@
 		4732DB751FB360B200948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Fruits.json; sourceTree = "<group>"; };
 		4732DB761FB3623F00948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Animals.json; sourceTree = "<group>"; };
 		4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		4733CB271FDEF02E003C51A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4738D4A61FBB571200374CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Category.json; sourceTree = "<group>"; };
 		47CB28CB1FD9ACF2000F7E85 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = LearnoKids/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		47E61AB61FC8610E0025DDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				471ED3411FD06E5200AFA6C4 /* AdPreview.swift */,
 				984C262E1F7F7FC600BA16DD /* Main.storyboard */,
 				4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */,
+				4733CB271FDEF02E003C51A8 /* ViewController.swift */,
 				984C26311F7F7FC700BA16DD /* Assets.xcassets */,
 				984C26361F7F7FC700BA16DD /* Info.plist */,
 				47E61AB51FC8610E0025DDDC /* LaunchScreen.storyboard */,
@@ -589,6 +592,7 @@
 				47FF01D61F98809E00B92591 /* CustomImageFlowLayout.swift in Sources */,
 				4733457E1FB2A23B00FF1BA3 /* CategoryViewController.swift in Sources */,
 				47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */,
+				4733CB281FDEF02E003C51A8 /* ViewController.swift in Sources */,
 				471ED3421FD06E5200AFA6C4 /* AdPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
