@@ -1,60 +1,60 @@
  [{
   "name": "One",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "One",
   "sound": "One"
   },
   {
   "name": "Two",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Two",
   "sound": "Two"
   },
   {
   "name": "Three",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Three",
   "sound": "Three"
   },
   {
   "name": "Four",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Four",
   "sound": "Four"
   },
   {
   "name": "Five",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Five",
   "sound": "Five"
   },
   {
   "name": "Six",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Six",
   "sound": "Six"
   },
   {
   "name": "Seven",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Seven",
   "sound": "Seven"
   },
   {
   "name": "Eight",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Eight",
   "sound": "Eight"
   },
   {
   "name": "Nine",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Nine",
   "sound": "Nine"
   },
   {
   "name": "Ten",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Ten",
   "sound": "Ten"
   }

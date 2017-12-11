@@ -264,7 +264,7 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
     func selectedSegue(obj: objects, imgFrame:CGRect, oldImgFrame:CGRect)
     {
         displayView.isHidden = false
-        container.alpha = 0.4
+        container.alpha = 0
         imageView.image = obj.img
         //self.navigationController?.isNavigationBarHidden = true
         let color = UIColor.clear

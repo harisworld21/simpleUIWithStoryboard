@@ -1,60 +1,60 @@
  [{
   "name": "Ambulance",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Ambulance",
   "sound": "Ambulance"
   },
   {
   "name": "Bus",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Bus",
   "sound": "Bus"
   },
   {
   "name": "Car",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Car",
   "sound": "Car"
   },
   {
   "name": "Cycle",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Cycle",
   "sound": "Cycle"
   },
   {
   "name": "Helicopter",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Helicopter",
   "sound": "Helicopter"
   },
   {
   "name": "Jeep",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Jeep",
   "sound": "Jeep"
   },
   {
   "name": "Plane",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Plane",
   "sound": "Plane"
   },
   {
   "name": "Scooter",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Scooter",
   "sound": "Scooter"
   },
   {
   "name": "Ship",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Ship",
   "sound": "Ship"
   },
   {
   "name": "Train",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "Train",
   "sound": "Train"
   }

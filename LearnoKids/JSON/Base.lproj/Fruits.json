@@ -1,60 +1,60 @@
  [{
   "name": "Apple",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "apple",
   "sound": "apple"
   },
   {
   "name": "Orange",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "orange",
   "sound": "orange"
   },
   {
   "name": "Peach",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "peach",
   "sound": "peach"
   },
   {
   "name": "Grapes",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "grapes",
   "sound": "grapes"
   },
   {
   "name": "Watermelon",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "watermelon",
   "sound": "watermelon"
   },
   {
   "name": "Papaya",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "papaya",
   "sound": "papaya"
   },
   {
   "name": "Pear",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "pear",
   "sound": "pear"
   },
   {
   "name": "Banana",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "banana",
   "sound": "banana"
   },
   {
   "name": "Kiwi",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "kiwi",
   "sound": "kiwi"
   },
   {
   "name": "Coconut",
-  "titleColor": "black",
+  "titleColor": "white",
   "image": "coconut",
   "sound": "coconut"
   }

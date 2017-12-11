@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "stop.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "btn-pause-1.png",
       "scale" : "2x"
     },
     {
