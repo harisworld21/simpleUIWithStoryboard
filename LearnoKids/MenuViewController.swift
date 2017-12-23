@@ -47,11 +47,11 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
         {
             if Bool(state)
             {
-                soundOnOff.setImage(#imageLiteral(resourceName: "sound_on"), for: .normal)
+                soundOnOff.setImage(#imageLiteral(resourceName: "btn_sound_on"), for: .normal)
             }
             else
             {
-                soundOnOff.setImage(#imageLiteral(resourceName: "sound_off"), for: .normal)
+                soundOnOff.setImage(#imageLiteral(resourceName: "btn_sound_off"), for: .normal)
             }
         }
         else
@@ -101,7 +101,7 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
     }
     
     @objc func somAction() {
-        findNext()
+        next()
         if !autoTimer.isValid
         {
             autoTimer.fire()
@@ -111,7 +111,7 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
     func startAutoPlay()
     {
         stopAutoPlay()
-        autoOnOff.setImage(#imageLiteral(resourceName: "stop"), for: .normal)
+        autoOnOff.setImage(#imageLiteral(resourceName: "btn_pause"), for: .normal)
         autoTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(MenuViewController.somAction), userInfo: nil, repeats: true)
     }
     
@@ -121,19 +121,20 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
         {
             autoTimer.invalidate()
         }
-        autoOnOff.setImage(#imageLiteral(resourceName: "start"), for: .normal)
+        autoOnOff.setImage(#imageLiteral(resourceName: "btn_play"), for: .normal)
         autoTimer.invalidate()
     }
     
     @IBAction func autoPlay(_ sender: Any) {
         let state = autoOnOff.imageView?.image
-        if state == #imageLiteral(resourceName: "stop")
+        if state == #imageLiteral(resourceName: "btn_pause")
         {
             stopAutoPlay()
         }
         else
         {
             childView.currentIndex += 1
+            next()
             startAutoPlay()
         }
     }
@@ -143,12 +144,12 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
         {
             if Bool(state)
             {
-                soundOnOff.setImage(#imageLiteral(resourceName: "sound_off"), for: .normal)
+                soundOnOff.setImage(#imageLiteral(resourceName: "btn_sound_off"), for: .normal)
                 UserDefaults.standard.set(false, forKey: "mute_state")
             }
             else
             {
-                soundOnOff.setImage(#imageLiteral(resourceName: "sound_on"), for: .normal)
+                soundOnOff.setImage(#imageLiteral(resourceName: "btn_sound_on"), for: .normal)
                 UserDefaults.standard.set(true, forKey: "mute_state")
             }
         }
@@ -183,16 +184,16 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
             switch swipe.direction
             {
             case UISwipeGestureRecognizerDirection.left:
-            findPrevious();
+            previous();
             case UISwipeGestureRecognizerDirection.right:
-            findNext();
+            next();
             default:
                 break
             }
         }
     }
     
-    @IBAction func findPrevious()
+    func previous()
     {
         if let obj = childView.object as [objects]!
         {
@@ -204,7 +205,7 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
             tmpImgView.image = imageView.image
             tmpImgView.frame = imageView.frame
             view.addSubview(tmpImgView)
-
+            
             if curIndex - 1 >= 0
             {
                 if let prev = obj[curIndex-1] as objects!
@@ -224,14 +225,13 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
         }
     }
     
-    @IBAction func findNext()
+    func next()
     {
         if let obj = childView.object as [objects]!
         {
             if childView.currentIndex+1 == childView.object.count
             {
                 stopAutoPlay()
-                return
             }
             var curIndex = childView.currentIndex
             curIndex += 1
@@ -259,6 +259,18 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
                 }
             }
         }
+    }
+    
+    @IBAction func findPrevious()
+    {
+        stopAutoPlay()
+        previous()
+    }
+    
+    @IBAction func findNext()
+    {
+        stopAutoPlay()
+        next()
     }
     
     func selectedSegue(obj: objects, imgFrame:CGRect, oldImgFrame:CGRect)

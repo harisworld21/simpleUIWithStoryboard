@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4708BFF11FE42F30006F1F84 /* LearnoKidsUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4708BFF01FE42F30006F1F84 /* LearnoKidsUITest.swift */; };
 		470A11FA1F9A4B0C00DE6AC6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */; };
 		471ED3421FD06E5200AFA6C4 /* AdPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471ED3411FD06E5200AFA6C4 /* AdPreview.swift */; };
 		4732DB701FB3602700948723 /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 4732DB721FB3602700948723 /* Animals.json */; };
@@ -91,11 +92,16 @@
 		984C262D1F7F7FC600BA16DD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C262C1F7F7FC600BA16DD /* Constants.swift */; };
 		984C26301F7F7FC600BA16DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984C262E1F7F7FC600BA16DD /* Main.storyboard */; };
 		984C26321F7F7FC700BA16DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984C26311F7F7FC700BA16DD /* Assets.xcassets */; };
-		984C26401F7F7FC700BA16DD /* simpleUIWithStoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C263F1F7F7FC700BA16DD /* simpleUIWithStoryboardTests.swift */; };
-		984C264B1F7F7FC700BA16DD /* simpleUIWithStoryboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984C264A1F7F7FC700BA16DD /* simpleUIWithStoryboardUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4708BFF31FE42F30006F1F84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 984C261F1F7F7FC600BA16DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 984C26261F7F7FC600BA16DD;
+			remoteInfo = LearnoKids;
+		};
 		984C263C1F7F7FC700BA16DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 984C261F1F7F7FC600BA16DD /* Project object */;
@@ -113,6 +119,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4708BFEE1FE42F30006F1F84 /* LearnoKidsUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnoKidsUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4708BFF01FE42F30006F1F84 /* LearnoKidsUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnoKidsUITest.swift; sourceTree = "<group>"; };
+		4708BFF21FE42F30006F1F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		471ED3411FD06E5200AFA6C4 /* AdPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPreview.swift; sourceTree = "<group>"; };
 		4732DB751FB360B200948723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Fruits.json; sourceTree = "<group>"; };
@@ -200,14 +209,17 @@
 		984C26311F7F7FC700BA16DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		984C26361F7F7FC700BA16DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		984C263B1F7F7FC700BA16DD /* LearnoKidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnoKidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		984C263F1F7F7FC700BA16DD /* simpleUIWithStoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleUIWithStoryboardTests.swift; sourceTree = "<group>"; };
-		984C26411F7F7FC700BA16DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		984C26461F7F7FC700BA16DD /* LearnoKidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnoKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		984C264A1F7F7FC700BA16DD /* simpleUIWithStoryboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleUIWithStoryboardUITests.swift; sourceTree = "<group>"; };
-		984C264C1F7F7FC700BA16DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4708BFEB1FE42F30006F1F84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		984C26241F7F7FC600BA16DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +245,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4708BFEF1FE42F30006F1F84 /* LearnoKidsUITest */ = {
+			isa = PBXGroup;
+			children = (
+				4708BFF01FE42F30006F1F84 /* LearnoKidsUITest.swift */,
+				4708BFF21FE42F30006F1F84 /* Info.plist */,
+			);
+			path = LearnoKidsUITest;
+			sourceTree = "<group>";
+		};
 		47E61AC11FC870D10025DDDC /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,8 +346,7 @@
 			children = (
 				984C26291F7F7FC600BA16DD /* LearnoKids */,
 				47CB28CB1FD9ACF2000F7E85 /* GoogleMobileAds.framework */,
-				984C263E1F7F7FC700BA16DD /* LearnoKidsTests */,
-				984C26491F7F7FC700BA16DD /* LearnoKidsUITests */,
+				4708BFEF1FE42F30006F1F84 /* LearnoKidsUITest */,
 				984C26281F7F7FC600BA16DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -337,6 +357,7 @@
 				984C26271F7F7FC600BA16DD /* LearnoKids.app */,
 				984C263B1F7F7FC700BA16DD /* LearnoKidsTests.xctest */,
 				984C26461F7F7FC700BA16DD /* LearnoKidsUITests.xctest */,
+				4708BFEE1FE42F30006F1F84 /* LearnoKidsUITest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,27 +383,27 @@
 			path = LearnoKids;
 			sourceTree = "<group>";
 		};
-		984C263E1F7F7FC700BA16DD /* LearnoKidsTests */ = {
-			isa = PBXGroup;
-			children = (
-				984C263F1F7F7FC700BA16DD /* simpleUIWithStoryboardTests.swift */,
-				984C26411F7F7FC700BA16DD /* Info.plist */,
-			);
-			path = LearnoKidsTests;
-			sourceTree = "<group>";
-		};
-		984C26491F7F7FC700BA16DD /* LearnoKidsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				984C264A1F7F7FC700BA16DD /* simpleUIWithStoryboardUITests.swift */,
-				984C264C1F7F7FC700BA16DD /* Info.plist */,
-			);
-			path = LearnoKidsUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4708BFED1FE42F30006F1F84 /* LearnoKidsUITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4708BFF51FE42F30006F1F84 /* Build configuration list for PBXNativeTarget "LearnoKidsUITest" */;
+			buildPhases = (
+				4708BFEA1FE42F30006F1F84 /* Sources */,
+				4708BFEB1FE42F30006F1F84 /* Frameworks */,
+				4708BFEC1FE42F30006F1F84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4708BFF41FE42F30006F1F84 /* PBXTargetDependency */,
+			);
+			name = LearnoKidsUITest;
+			productName = LearnoKidsUITest;
+			productReference = 4708BFEE1FE42F30006F1F84 /* LearnoKidsUITest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		984C26261F7F7FC600BA16DD /* LearnoKids */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 984C264F1F7F7FC700BA16DD /* Build configuration list for PBXNativeTarget "LearnoKids" */;
@@ -446,6 +467,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Sunil Dutt";
 				TargetAttributes = {
+					4708BFED1FE42F30006F1F84 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 984C26261F7F7FC600BA16DD;
+					};
 					984C26261F7F7FC600BA16DD = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -478,11 +504,19 @@
 				984C26261F7F7FC600BA16DD /* LearnoKids */,
 				984C263A1F7F7FC700BA16DD /* LearnoKidsTests */,
 				984C26451F7F7FC700BA16DD /* LearnoKidsUITests */,
+				4708BFED1FE42F30006F1F84 /* LearnoKidsUITest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4708BFEC1FE42F30006F1F84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		984C26251F7F7FC600BA16DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -582,6 +616,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4708BFEA1FE42F30006F1F84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4708BFF11FE42F30006F1F84 /* LearnoKidsUITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		984C26231F7F7FC600BA16DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,7 +643,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				984C26401F7F7FC700BA16DD /* simpleUIWithStoryboardTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,13 +650,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				984C264B1F7F7FC700BA16DD /* simpleUIWithStoryboardUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4708BFF41FE42F30006F1F84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 984C26261F7F7FC600BA16DD /* LearnoKids */;
+			targetProxy = 4708BFF31FE42F30006F1F84 /* PBXContainerItemProxy */;
+		};
 		984C263D1F7F7FC700BA16DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 984C26261F7F7FC600BA16DD /* LearnoKids */;
@@ -696,6 +741,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4708BFF61FE42F30006F1F84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LearnoKidsUITest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hari.LearnoKidsUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnoKids;
+			};
+			name = Debug;
+		};
+		4708BFF71FE42F30006F1F84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LearnoKidsUITest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hari.LearnoKidsUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LearnoKids;
+			};
+			name = Release;
+		};
 		984C264D1F7F7FC700BA16DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -890,7 +963,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GZ22B48MK;
+				DEVELOPMENT_TEAM = 6L55VQGK3Q;
 				INFOPLIST_FILE = simpleUIWithStoryboardUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shakunsun.simpleUIWithStoryboardUITests;
@@ -906,7 +979,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7GZ22B48MK;
+				DEVELOPMENT_TEAM = 6L55VQGK3Q;
 				INFOPLIST_FILE = simpleUIWithStoryboardUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shakunsun.simpleUIWithStoryboardUITests;
@@ -920,6 +993,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4708BFF51FE42F30006F1F84 /* Build configuration list for PBXNativeTarget "LearnoKidsUITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4708BFF61FE42F30006F1F84 /* Debug */,
+				4708BFF71FE42F30006F1F84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		984C26221F7F7FC600BA16DD /* Build configuration list for PBXProject "LearnoKids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
