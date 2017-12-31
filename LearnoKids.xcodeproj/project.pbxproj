@@ -13,6 +13,7 @@
 		4733457E1FB2A23B00FF1BA3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */; };
 		4733CB281FDEF02E003C51A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733CB271FDEF02E003C51A8 /* ViewController.swift */; };
 		4738D4A71FBB571200374CAD /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 4738D4A51FBB571200374CAD /* Category.json */; };
+		47609E5F1FF9704300B311FF /* AdPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471ED3411FD06E5200AFA6C4 /* AdPreview.swift */; };
 		47CB28CC1FD9ACF2000F7E85 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CB28CB1FD9ACF2000F7E85 /* GoogleMobileAds.framework */; };
 		47E61AB71FC8610E0025DDDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E61AB51FC8610E0025DDDC /* LaunchScreen.storyboard */; };
 		47E61ABE1FC870140025DDDC /* Vehicles.json in Resources */ = {isa = PBXBuildFile; fileRef = 47E61AB81FC870130025DDDC /* Vehicles.json */; };
@@ -628,6 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				984C262D1F7F7FC600BA16DD /* Constants.swift in Sources */,
+				47609E5F1FF9704300B311FF /* AdPreview.swift in Sources */,
 				470A11FA1F9A4B0C00DE6AC6 /* MenuViewController.swift in Sources */,
 				984C262B1F7F7FC600BA16DD /* AppDelegate.swift in Sources */,
 				47FF01D61F98809E00B92591 /* CustomImageFlowLayout.swift in Sources */,
