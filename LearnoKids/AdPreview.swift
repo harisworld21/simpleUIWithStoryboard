@@ -16,7 +16,7 @@ class AdPreview : NSObject,GADBannerViewDelegate
     func setUpAd()
     {
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        bannerView.adUnitID = "ca-app-pub-6034271363001238/4534363426"
+        bannerView.adUnitID = "ca-app-pub-1175235904706505/1377356622"
         bannerView.adSize = kGADAdSizeBanner
         bannerView.delegate = self
         bannerView.load(GADRequest())

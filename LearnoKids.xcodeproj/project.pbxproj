@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4708BFF11FE42F30006F1F84 /* LearnoKidsUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4708BFF01FE42F30006F1F84 /* LearnoKidsUITest.swift */; };
 		470A11FA1F9A4B0C00DE6AC6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470A11F91F9A4B0C00DE6AC6 /* MenuViewController.swift */; };
-		471ED3421FD06E5200AFA6C4 /* AdPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471ED3411FD06E5200AFA6C4 /* AdPreview.swift */; };
 		4732DB701FB3602700948723 /* Animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 4732DB721FB3602700948723 /* Animals.json */; };
 		4733457E1FB2A23B00FF1BA3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733457D1FB2A23B00FF1BA3 /* CategoryViewController.swift */; };
 		4733CB281FDEF02E003C51A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4733CB271FDEF02E003C51A8 /* ViewController.swift */; };
@@ -635,7 +634,6 @@
 				4733457E1FB2A23B00FF1BA3 /* CategoryViewController.swift in Sources */,
 				47FFA7C01F964B3400597789 /* FLowerViewController.swift in Sources */,
 				4733CB281FDEF02E003C51A8 /* ViewController.swift in Sources */,
-				471ED3421FD06E5200AFA6C4 /* AdPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

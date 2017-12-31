@@ -30,14 +30,14 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
         displayView.isHidden = true
         self.navigationItem.title = subCategoryName
         soundMuteState()
-        initAd()
+        //initAd()
     }
     
-    func initAd()
+    /*func initAd()
     {
         AdPreview.sharedInstance.setUpAd()
         AdPreview.sharedInstance.loadAd(viewC: self, banner: bannerView)
-    }
+    }*/
     
 
     
@@ -184,8 +184,10 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
             switch swipe.direction
             {
             case UISwipeGestureRecognizerDirection.left:
+                stopAutoPlay()
             previous();
             case UISwipeGestureRecognizerDirection.right:
+                stopAutoPlay()
             next();
             default:
                 break
