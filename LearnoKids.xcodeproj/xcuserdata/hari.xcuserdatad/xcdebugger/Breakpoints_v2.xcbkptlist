@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LearnoKids/AdPreview.swift"
-            timestampString = "536173074.41465"
+            timestampString = "536442043.197351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "loadAd(viewC:banner:)"
             landmarkType = "7">
          </BreakpointContent>
