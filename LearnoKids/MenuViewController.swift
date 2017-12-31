@@ -30,14 +30,14 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
         displayView.isHidden = true
         self.navigationItem.title = subCategoryName
         soundMuteState()
-        //initAd()
+        initAd()
     }
     
-    /*func initAd()
+    func initAd()
     {
         AdPreview.sharedInstance.setUpAd()
         AdPreview.sharedInstance.loadAd(viewC: self, banner: bannerView)
-    }*/
+    }
     
 
     
