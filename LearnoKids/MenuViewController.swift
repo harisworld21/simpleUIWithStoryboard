@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 import AudioToolbox
-import GoogleMobileAds
+
 
 class MenuViewController: UIViewController{
     
@@ -30,16 +30,8 @@ class MenuViewController: UIViewController{
         displayView.isHidden = true
         self.navigationItem.title = subCategoryName
         soundMuteState()
-        //initAd()
     }
     
-    /*func initAd()
-    {
-        AdPreview.sharedInstance.setUpAd()
-        AdPreview.sharedInstance.loadAd(viewC: self, banner: bannerView)
-    }
-    */
-
     
     func soundMuteState()
     {

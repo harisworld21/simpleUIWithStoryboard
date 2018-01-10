@@ -13,16 +13,10 @@ class ViewController: UIViewController
         @IBOutlet weak var bannerView: UIView!
     
     override func viewDidLoad() {
-        //AdPreview.sharedInstance.setUpAd()
     }
     
-    /*func initAd()
-    {
-        //        tableView.tableFooterView = bannerView
-        AdPreview.sharedInstance.loadAd(viewC: self, banner: bannerView)
-    }*/
+
     
     override func viewDidAppear(_ animated: Bool) {
-       // initAd()
     }
 }
