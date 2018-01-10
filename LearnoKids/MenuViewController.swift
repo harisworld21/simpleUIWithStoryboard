@@ -11,7 +11,7 @@ import AVFoundation
 import AudioToolbox
 import GoogleMobileAds
 
-class MenuViewController: UIViewController,GADBannerViewDelegate {
+class MenuViewController: UIViewController{
     
     @IBOutlet weak var soundOnOff: UIButton!
     @IBOutlet weak var autoOnOff: UIButton!
@@ -30,15 +30,15 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
         displayView.isHidden = true
         self.navigationItem.title = subCategoryName
         soundMuteState()
-        initAd()
+        //initAd()
     }
     
-    func initAd()
+    /*func initAd()
     {
         AdPreview.sharedInstance.setUpAd()
         AdPreview.sharedInstance.loadAd(viewC: self, banner: bannerView)
     }
-    
+    */
 
     
     func soundMuteState()
@@ -101,6 +101,11 @@ class MenuViewController: UIViewController,GADBannerViewDelegate {
     }
     
     @objc func somAction() {
+        if childView.currentIndex+1 == childView.object.count
+        {
+            stopAutoPlay()
+            return
+        }
         next()
         if !autoTimer.isValid
         {
