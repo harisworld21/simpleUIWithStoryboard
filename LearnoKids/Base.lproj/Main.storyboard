@@ -46,20 +46,20 @@
             <objects>
                 <viewController id="imF-Cj-aef" customClass="MenuViewController" customModule="LearnoKids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7mf-n7-jrd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vj-XR-aJJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <connections>
                                     <segue destination="ngi-3G-ZEx" kind="embed" identifier="containerSegue" id="dVw-gd-Cbk"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqC-Tb-yRd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIL-nJ-7mV">
-                                        <rect key="frame" x="0.0" y="8" width="375" height="531"/>
+                                        <rect key="frame" x="0.0" y="8" width="375" height="595"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh4-xE-XRu">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
@@ -274,7 +274,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="8gJ-Lb-Dkx" kind="relationship" relationship="rootViewController" id="7xK-pD-1fj"/>
+                        <segue destination="zpd-Cz-XhZ" kind="relationship" relationship="rootViewController" id="XKe-gY-1XQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZ7-Af-4xx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -286,37 +286,6 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="-3012" y="137"/>
-        </scene>
-        <!--Collections-->
-        <scene sceneID="TvO-ch-ahP">
-            <objects>
-                <viewController id="8gJ-Lb-Dkx" customClass="ViewController" customModule="LearnoKids" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jeK-BH-xVb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wac-Mx-rZ9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" red="0.55363118649999998" green="0.77567964789999999" blue="0.24809592959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="zpd-Cz-XhZ" kind="embed" id="DxK-WZ-9mJ"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.55363118649999998" green="0.77567964789999999" blue="0.24809592959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="wac-Mx-rZ9" secondAttribute="bottom" id="46V-Gi-HMM"/>
-                            <constraint firstItem="wac-Mx-rZ9" firstAttribute="trailing" secondItem="Q2r-Wi-qHM" secondAttribute="trailing" id="OmM-Nv-JuD"/>
-                            <constraint firstItem="wac-Mx-rZ9" firstAttribute="leading" secondItem="Q2r-Wi-qHM" secondAttribute="leading" id="Umz-o7-gaq"/>
-                            <constraint firstItem="wac-Mx-rZ9" firstAttribute="top" secondItem="jeK-BH-xVb" secondAttribute="top" id="duf-wU-Kdb"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Q2r-Wi-qHM"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Collections" id="9o8-9i-adA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lvb-u1-1aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2052" y="611.24437781109452"/>
         </scene>
         <!--Collections-->
         <scene sceneID="FSa-Ej-Ju8">
@@ -371,14 +340,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8y-qy-ZiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266.4000000000001" y="24.7376311844078"/>
+            <point key="canvasLocation" x="-2095" y="168"/>
         </scene>
         <!--Flower View Controller-->
         <scene sceneID="vrz-Hg-eA5">
             <objects>
                 <collectionViewController id="ngi-3G-ZEx" customClass="FlowerViewController" customModule="LearnoKids" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZTU-GI-lOY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.55363118649999998" green="0.77567964789999999" blue="0.24809592959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3170,7 +3139,7 @@ AAJ7RAACe1YAAntZAAJ7XgAAAAAAAAQBAAAAAAAAAEEAAAAAAAAAAAAAAAAAAntgA
         </image>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mym-un-Reh"/>
+        <segue reference="WkD-Dc-yfj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>
