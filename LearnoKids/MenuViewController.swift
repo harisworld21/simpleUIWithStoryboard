@@ -101,6 +101,11 @@ class MenuViewController: UIViewController{
     }
     
     @objc func somAction() {
+        if childView.currentIndex+1 == childView.object.count
+        {
+            stopAutoPlay()
+            return
+        }
         next()
         if !autoTimer.isValid
         {
